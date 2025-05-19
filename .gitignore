@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Node modules (if using npm packages or tools like webpack, vite, etc.)
+node_modules/
+
+# Editor folders
+.vscode/
+.idea/
+
+# System files
+Thumbs.db

@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style="font-size: 16px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Aurora Ribbed Beanie - A Luxe Knit by The Woolly Alchemist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --font-primary: 'Cormorant Garamond', serif;
+      --font-secondary: 'Lato', sans-serif;
+      --color-text: #3A3A3A;
+      --color-text-subtle: #707070;
+      --color-heading: #1E1E1E;
+      --color-accent: #B07A58;
+      --color-accent-hover: #936040;
+      --color-background: #F9F7F5;
+      --color-surface: #FFFFFF;
+      --color-border: #E5E0DC;
+      --color-border-strong: #D1C8C3;
+      --color-highlight-bg: #F4F0ED;
+      --color-success: #5A8B4C;
+      --color-link: var(--color-accent);
+      --color-focus-ring: #4A90E2;
+      --shadow-soft: 0 2px 5px rgba(0,0,0,0.04);
+      --shadow-medium: 0 4px 10px rgba(0,0,0,0.06);
+      --base-font-size: 16px; /* This will be controlled by JS for global font scaling */
+      --toolbar-button-font-size: 13px; /* Fixed font size for toolbar buttons */
+      --line-height-base: 1.6;
+      --line-height-heading: 1.3;
+      --line-height-tight-print: 1.35;
+      --spacing-unit: 8px;
+      --animation-duration: 0.2s;
+      --easing: ease-in-out;
+    }
+
+    [data-theme="dark"] {
+      --color-text: #CFCFCF; --color-text-subtle: #9E9E9E; --color-heading: #EAEAEA;
+      --color-accent: #D2B48C; --color-accent-hover: #B99B71; --color-background: #242424;
+      --color-surface: #2D2D2D; --color-border: #4A4A4A; --color-border-strong: #5F5F5F;
+      --color-highlight-bg: #383838; --color-success: #8DBF80; --color-link: var(--color-accent);
+      --color-focus-ring: #64B5F6; --shadow-soft: 0 3px 8px rgba(0,0,0,0.2);
+      --shadow-medium: 0 5px 15px rgba(0,0,0,0.25);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      html:not([data-theme="light"]) { 
+        color-scheme: dark;
+        --color-text: #CFCFCF; --color-text-subtle: #9E9E9E; --color-heading: #EAEAEA;
+        --color-accent: #D2B48C; --color-accent-hover: #B99B71; --color-background: #242424;
+        --color-surface: #2D2D2D; --color-border: #4A4A4A; --color-border-strong: #5F5F5F;
+        --color-highlight-bg: #383838; --color-success: #8DBF80; --color-link: var(--color-accent);
+        --color-focus-ring: #64B5F6; --shadow-soft: 0 3px 8px rgba(0,0,0,0.2);
+        --shadow-medium: 0 5px 15px rgba(0,0,0,0.25);
+      }
+       html:not([data-theme="light"]) body { background-color: var(--color-background); color: var(--color-text); }
+       html:not([data-theme="light"]) .container { background-color: var(--color-surface); }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: var(--base-font-size); }
+
+    body {
+      font-family: var(--font-secondary); line-height: var(--line-height-base); 
+      color: var(--color-text); background-color: var(--color-background);
+      transition: background-color var(--animation-duration) var(--easing), color var(--animation-duration) var(--easing);
+      font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-focus-ring); outline-offset: 2px;
+        box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-focus-ring) 30%, transparent);
+    }
+    .tool-button:focus-visible, .section-title:focus-visible, .instruction-marker:focus-visible, abbr[data-original-title]:focus-visible {
+        outline: 2px solid var(--color-focus-ring); outline-offset: 1px;
+    }
+
+    .skip-link {
+      position: absolute; top: -100px; left: 0; background: var(--color-accent);
+      color: var(--color-surface) !important; padding: 10px 18px; z-index: 10001; 
+      transition: top var(--animation-duration) var(--easing);
+      border-bottom-right-radius: 4px; font-weight: bold;
+    }
+    .skip-link:focus { top: 0; }
+
+    .container {
+      max-width: 780px; margin: calc(var(--spacing-unit) * 5) auto;
+      padding: calc(var(--spacing-unit) * 4); background-color: var(--color-surface);
+      box-shadow: var(--shadow-medium); border-radius: 8px;
+      transition: background-color var(--animation-duration) var(--easing);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-primary); color: var(--color-heading); font-weight: 600;
+        line-height: var(--line-height-heading); margin-bottom: 0.6em;
+    }
+    p { margin-bottom: 1em; }
+    a { color: var(--color-link); text-decoration: none; transition: color var(--animation-duration) var(--easing); }
+    a:hover { color: var(--color-accent-hover); text-decoration: underline; }
+    strong { font-weight: 700; }
+    abbr[data-original-title] { 
+        text-decoration: underline dotted; 
+        cursor: help;
+    }
+
+
+    #section-intro-notes .section-content p,
+    #section-finishing .section-content p { margin-bottom: 1.5em; }
+    #section-intro-notes .section-content p:last-child,
+    #section-finishing .section-content p:last-child { margin-bottom: 1em; }
+
+    .pattern-tools-nav {
+        background-color: var(--color-surface);
+        padding: 0;
+        border-bottom: 1px solid var(--color-border); 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        box-shadow: var(--shadow-soft); min-height: 60px; contain: layout style;
+    }
+    .pattern-tools-nav-content-wrapper { 
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: space-between; 
+        gap: calc(var(--spacing-unit)*1.5) calc(var(--spacing-unit)*2);
+        width: 100%;
+        max-width: 820px; 
+        padding: calc(var(--spacing-unit)*1.5) calc(var(--spacing-unit)*2.5); 
+    }
+
+    .tool-group { display: flex; align-items: center; gap: var(--spacing-unit); }
+    .tool-group .tool-label {
+        font-size: 0.75rem; 
+        color: var(--color-text-subtle); font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.05em; margin-right: calc(var(--spacing-unit) * 0.25);
+    }
+    .tool-button {
+        background-color: transparent; color: var(--color-text); border: 1px solid var(--color-border-strong);
+        padding: calc(var(--spacing-unit)*0.75) calc(var(--spacing-unit)*1.25);
+        min-height: 36px; min-width: 36px; border-radius: 4px; cursor: pointer;
+        font-family: var(--font-secondary); 
+        font-size: var(--toolbar-button-font-size); 
+        font-weight: 600;
+        transition: background-color var(--animation-duration) var(--easing), color var(--animation-duration) var(--easing), border-color var(--animation-duration) var(--easing), box-shadow var(--animation-duration) var(--easing);
+        line-height: 1; display: inline-flex; align-items: center; justify-content: center;
+    }
+    .tool-button:hover {
+        background-color: var(--color-highlight-bg); border-color: var(--color-accent); color: var(--color-accent);
+    }
+    .tool-button.active, .size-button[aria-checked="true"] {
+        background-color: var(--color-accent); color: var(--color-surface); border-color: var(--color-accent);
+    }
+    .tool-button.active:hover, .size-button[aria-checked="true"]:hover {
+        background-color: var(--color-accent-hover); border-color: var(--color-accent-hover); color: var(--color-surface);
+    }
+    .tool-button:disabled {
+        opacity: 0.5; cursor: not-allowed; background-color: var(--color-highlight-bg) !important;
+        color: var(--color-text-subtle) !important; border-color: var(--color-border) !important;
+    }
+    .tool-button i { margin-right: 5px; font-size: 0.9em; }
+    .tool-button.icon-only i { margin-right: 0; }
+    
+    .size-buttons-wrapper { display: flex; gap: calc(var(--spacing-unit) * 0.5); }
+    .size-button { 
+      padding: calc(var(--spacing-unit)*0.75) var(--spacing-unit); 
+      font-weight: 700; 
+      font-size: var(--toolbar-button-font-size); 
+    }
+    
+    #size-dropdown-toggle { display: none; } 
+    #size-dropdown-toggle .current-size-display { font-weight: bold; margin: 0 3px;}
+    #size-dropdown-toggle i.fa-caret-down { margin-left: 5px; transition: transform var(--animation-duration) var(--easing); }
+    #size-dropdown-toggle[aria-expanded="true"] i.fa-caret-down { transform: rotate(180deg); }
+
+    .size-selector-group { position: relative; } 
+
+    #unit-toggle-current-unit-display { display: none; font-weight: bold; }
+
+
+    .pattern-header {
+      text-align: center; margin-bottom: calc(var(--spacing-unit)*4);
+      padding-bottom: calc(var(--spacing-unit)*2.5); border-bottom: 1px solid var(--color-border); 
+    }
+    .pattern-title {
+      font-size: clamp(2.2rem, 6vw, 3rem); font-weight: 700;
+      color: var(--color-heading); margin-bottom: 0.2rem;
+    }
+    .pattern-subtitle {
+      font-size: 1.35rem; color: var(--color-accent); font-family: var(--font-secondary);
+      font-weight: 400; margin-bottom: calc(var(--spacing-unit)*2); font-style: italic;
+    }
+    .pattern-image-wrapper {
+        position: relative;
+        margin-bottom: calc(var(--spacing-unit)*2.5);
+        transition: margin-bottom var(--animation-duration) var(--easing); 
+    }
+    .pattern-image-wrapper.image-hidden { 
+        margin-bottom: var(--spacing-unit); 
+    }
+    .pattern-image {
+      max-width: 100%; height: auto; border-radius: 6px;
+      box-shadow: var(--shadow-soft); border: 1px solid var(--color-border);
+      display: block; 
+    }
+    .pattern-image-wrapper.image-hidden .pattern-image {
+        display: none;
+    }
+    #toggle-image-btn {
+        position: absolute;
+        top: calc(var(--spacing-unit) * 1.5);
+        right: calc(var(--spacing-unit) * 1.5);
+        z-index: 5; 
+        background-color: color-mix(in srgb, var(--color-surface) 70%, transparent);
+        border-color: var(--color-border);
+    }
+    #toggle-image-btn:hover, #toggle-image-btn:focus-visible {
+        background-color: color-mix(in srgb, var(--color-surface) 90%, transparent);
+        border-color: var(--color-accent);
+    }
+
+    .pattern-overview {
+        font-size: 1rem; margin: calc(var(--spacing-unit)*2.5) auto;
+        padding: calc(var(--spacing-unit)*1.5) calc(var(--spacing-unit)*2);
+        background-color: var(--color-highlight-bg); border-left: 3px solid var(--color-accent);
+        border-radius: 0 4px 4px 0; max-width: 680px; text-align: left;
+    }
+    .pattern-overview p:last-child { margin-bottom: 0; }
+    
+    .toggleable-section { margin-bottom: calc(var(--spacing-unit)*3); contain: layout style; }
+    .section-title {
+      font-size: 1.6rem; color: var(--color-heading); margin-bottom: 0; 
+      padding: var(--spacing-unit) 0; border-bottom: 1px solid var(--color-border); 
+      font-weight: 600; display: flex; align-items: center; cursor: pointer; position: relative; 
+      transition: padding var(--animation-duration) var(--easing), opacity var(--animation-duration) var(--easing), color var(--animation-duration) var(--easing), border-bottom-style var(--animation-duration) var(--easing), font-size var(--animation-duration) var(--easing);
+    }
+    .section-title .section-title-text { 
+        flex-grow: 1;
+        min-width: 0; 
+    }
+    .section-title:hover { color: var(--color-accent); }
+    .section-title.is-collapsed {
+        opacity: 0.65; font-size: 1.5rem; margin-bottom: calc(var(--spacing-unit)*1.5); 
+        padding-top: calc(var(--spacing-unit)*0.75); padding-bottom: calc(var(--spacing-unit)*0.75);
+        border-bottom-style: dashed; border-bottom-color: var(--color-border-strong);
+    }
+     .section-title.is-collapsed .section-title-text {
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .section-title.is-collapsed:hover { opacity: 0.9; color: var(--color-accent-hover); }
+    .section-title.is-collapsed::after {
+        content: "(Hidden, won't print)"; font-size: 0.7em; font-style: italic; font-weight: 400;
+        color: var(--color-text-subtle); margin-left: 12px; display: inline-block;
+        opacity: 0; transition: opacity var(--animation-duration) var(--easing); pointer-events: none;
+    }
+    @media (hover: hover) and (min-width: 769px) {
+        .section-title.is-collapsed:hover::after { opacity: 1; }
+    }
+    .section-title .toggle-indicator {
+        font-family: var(--font-secondary); font-size: 1em; font-weight: bold; margin-right: 10px;
+        color: var(--color-accent); min-width: 1em; display: inline-block; text-align: center;
+        transition: transform var(--animation-duration) var(--easing);
+        flex-shrink: 0; 
+    }
+    .section-title i.section-icon { 
+        margin-right: 10px; color: var(--color-accent); font-size: 1.2rem;
+        flex-shrink: 0; 
+    }
+    .section-content {
+        padding-top: calc(var(--spacing-unit)*1.5);
+        transition: opacity var(--animation-duration) var(--easing), max-height var(--animation-duration) var(--easing), visibility var(--animation-duration) var(--easing), padding-top var(--animation-duration) var(--easing);
+        overflow: hidden; max-height: 10000px; visibility: visible; opacity: 1;
+    }
+    .section-content.is-collapsed {
+        max-height: 0; opacity: 0; padding-top: 0; margin-bottom: 0; visibility: hidden;
+    }
+        
+    .materials-list { list-style-type: none; }
+    .materials-list li {
+      margin-bottom: calc(var(--spacing-unit)*1.25); display: flex; flex-wrap: nowrap; 
+      align-items: flex-start; gap: 10px; 
+    }
+    .material-label {
+      font-weight: 600; width: 8rem; color: var(--color-heading);
+      flex-shrink: 0; font-family: var(--font-secondary); font-size: 0.9rem;
+    }
+    .material-label i { margin-right: 6px; color: var(--color-accent); }
+    .material-content { flex-grow: 1; }
+    .material-content strong { font-weight: 600; color: var(--color-accent); }
+    .material-content em { 
+        font-size: 0.85rem; display: block; margin-top: 0.3rem;
+        color: var(--color-text-subtle); font-style: italic;
+    }
+    
+    .size-table-container { overflow-x: auto; margin-bottom: var(--spacing-unit); }
+    .size-table {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      margin: calc(var(--spacing-unit)*2) 0; font-size: 0.85rem; 
+      border: 1px solid var(--color-border); border-radius: 6px; cursor: default;
+    }
+    .size-table tbody tr {
+      cursor: pointer; transition: background-color var(--animation-duration) var(--easing);
+    }
+    .size-table tbody tr:hover { background-color: var(--color-highlight-bg); }
+    .size-table th, .size-table td {
+      border-bottom: 1px solid var(--color-border);
+      padding: calc(var(--spacing-unit)*0.85) calc(var(--spacing-unit)*1.15); text-align: center;
+    }
+    .size-table th:last-child, .size-table td:last-child { border-right: 0; }
+    .size-table tr:last-child td { border-bottom: 0; }
+    .size-table td:not(:last-child) { border-right: 1px solid var(--color-border); }
+    .size-table thead th {
+      background-color: var(--color-highlight-bg); font-weight: 600;
+      color: var(--color-heading); font-family: var(--font-secondary); font-size: 0.9rem;
+    }
+    .size-table tr.active-size-row td, 
+    .size-table tr.active-size-row th[scope="row"] {
+        background-color: var(--color-accent) !important; color: var(--color-surface) !important; font-weight: bold;
+    }
+    [data-theme="dark"] .size-table tr.active-size-row td,
+    [data-theme="dark"] .size-table tr.active-size-row th[scope="row"] {
+        background-color: var(--color-accent) !important; color: var(--color-background) !important;
+    }
+    [data-theme="dark"] .size-table tr.active-size-row td strong,
+    [data-theme="dark"] .size-table tr.active-size-row th[scope="row"] strong {
+        color: var(--color-background) !important;
+    }
+    .size-table tbody tr.active-size-row:hover { background-color: var(--color-accent) !important; }
+    
+    .glossary-list { 
+      list-style-type: none; background-color: var(--color-highlight-bg);
+      padding: calc(var(--spacing-unit)*1.5); border-radius: 6px; border: 1px solid var(--color-border);
+    }
+    .glossary-list li { 
+        display: flex; 
+        margin-bottom: calc(var(--spacing-unit) * 0.75); 
+    }
+    .glossary-list li:last-child { margin-bottom: 0; }
+    .glossary-term {
+      font-weight: 700; width: 6.5rem; color: var(--color-accent);
+      font-family: var(--font-secondary); flex-shrink: 0; font-size: 0.9rem;
+    }
+    .glossary-def { font-size: 0.9rem; flex-grow: 1;}
+    
+    article.instructions ol, article.instructions ul:where(:not(.materials-list):not(.glossary-list)) {
+      margin-left: 1.25rem; list-style-position: outside; margin-bottom: 1em;
+    }
+    article.instructions ul:where(:not(.materials-list):not(.glossary-list)) { list-style-type: disc; }
+    
+    article.instructions li[data-instr-id] { /* Targetting LIs with instruction IDs for click */
+      cursor: pointer;
+    }
+    article.instructions li {
+      margin-bottom: calc(var(--spacing-unit) * 0.75); padding-left: calc(var(--spacing-unit) * 0.5);
+      position: relative; display: flex; align-items: flex-start;
+    }
+    article.instructions li.instr-completed { opacity: 0.7; }
+    article.instructions li.instr-completed > .instruction-text {
+      text-decoration: line-through; text-decoration-color: var(--color-text-subtle);
+    }
+    .instruction-marker {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 20px; height: 20px; border: 2px solid var(--color-border-strong);
+      border-radius: 50%; margin-right: calc(var(--spacing-unit) * 1.25);
+      cursor: pointer; transition: background-color var(--animation-duration) var(--easing), border-color var(--animation-duration) var(--easing);
+      flex-shrink: 0; position: relative; top: 3px;
+    }
+    .instruction-marker:hover { border-color: var(--color-accent); }
+    .instruction-marker i.fa-check {
+      font-size: 0.7rem; color: var(--color-surface); opacity: 0;
+      transition: opacity var(--animation-duration) var(--easing);
+    }
+    .instruction-marker[aria-checked="true"] {
+      background-color: var(--color-accent); border-color: var(--color-accent);
+    }
+    .instruction-marker[aria-checked="true"] i.fa-check { opacity: 1; }
+    .instruction-text { flex-grow: 1; }
+
+    article.instructions h4 { 
+        font-size: 1.8rem; color: var(--color-heading);
+        margin-top: calc(var(--spacing-unit) * 4); margin-bottom: calc(var(--spacing-unit) * 1.5);
+        padding-bottom: calc(var(--spacing-unit) * 0.75); display: flex; align-items: baseline;
+    }
+    article.instructions h4:first-of-type { margin-top: var(--spacing-unit); }
+    .instr-h4-number {
+        font-size: 1.1em; font-weight: 700; color: var(--color-accent);
+        margin-right: calc(var(--spacing-unit) * 0.75); line-height: 1;
+    }
+    .instr-h4-title { font-weight: 600; line-height: var(--line-height-heading); }
+    
+    .instructions .note, .instructions .pro-tip, .instructions .attention {
+      background-color: var(--color-highlight-bg);
+      padding: calc(var(--spacing-unit)*1.25) calc(var(--spacing-unit)*1.5);
+      border-left: 3px solid var(--color-accent); margin: calc(var(--spacing-unit)*1.5) 0;
+      border-radius: 0 4px 4px 0; font-size: 0.9rem;
+    }
+    .instructions .pro-tip { border-left-color: var(--color-success); }
+    .instructions .pro-tip::before { content: "Pro Tip: "; font-weight: bold; color: var(--color-success); }
+    .instructions .attention { 
+        border-left-color: #D32F2F;
+        background-color: color-mix(in srgb, #D32F2F 10%, var(--color-highlight-bg));
+    }
+    [data-theme="dark"] .instructions .attention { 
+        background-color: color-mix(in srgb, #D32F2F 20%, var(--color-highlight-bg));
+    }
+    .instructions .attention::before { content: "Important: "; font-weight: bold; color: #D32F2F; }
+    
+    .instructions strong, .instructions .size-dynamic, .instructions .unit-dynamic { 
+        font-weight: 700; color: var(--color-accent);
+    }
+    .stitch-count {
+        font-style: italic; color: var(--color-text-subtle); margin-top: 0.3rem;
+        margin-bottom: 0.8rem; display: block; font-size: 0.8rem;
+    }
+    .stitch-count::before { content: "(Sts rem: "; } 
+    .stitch-count::after { content: ")"; }
+
+    .media-container { 
+      max-width: 100%; overflow-x: auto; margin: calc(var(--spacing-unit)*2) 0;
+      padding: calc(var(--spacing-unit)*1.5); background-color: var(--color-highlight-bg);
+      border: 1px solid var(--color-border); border-radius: 6px; text-align: center;
+    }
+    .media-container img {
+      max-width: 100%; height: auto; display: block; margin: 0 auto var(--spacing-unit) auto;
+      border-radius: 4px; border: 1px solid var(--color-border);
+    }
+    .media-container .caption { font-size: 0.8rem; font-style: italic; color: var(--color-text-subtle); }
+        
+    .support-section ul { list-style-type: none; padding-left: 0; }
+    .support-section li { margin-bottom: 0.7rem; }
+    .support-section strong { font-weight: 600; color: var(--color-heading); }
+    
+    .footer {
+      margin-top: calc(var(--spacing-unit)*4); padding-top: calc(var(--spacing-unit)*2);
+      border-top: 1px solid var(--color-border); font-size: 0.8rem;
+      text-align: center; color: var(--color-text-subtle);
+    }
+    .footer p { margin-bottom: 0.4rem; }
+    .footer .social-links a { color: var(--color-text-subtle); margin: 0 5px; font-size: 1.1rem; }
+    .footer .social-links a:hover { color: var(--color-accent); }
+
+    .sr-only { 
+        position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; 
+        overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+    }
+    .status-message {
+        position: fixed; bottom: 20px; left: 20px; background-color: var(--color-heading);
+        color: var(--color-surface); padding: 10px 15px; border-radius: 4px; z-index: 10002;
+        box-shadow: var(--shadow-medium); opacity: 0; visibility: hidden;
+        transition: opacity var(--animation-duration) var(--easing), visibility var(--animation-duration) var(--easing);
+    }
+    .status-message.visible { opacity: 1; visibility: visible; }
+
+    .abbr-tooltip {
+        position: absolute;
+        background-color: var(--color-heading);
+        color: var(--color-surface);
+        padding: calc(var(--spacing-unit)*0.75) calc(var(--spacing-unit)*1.25);
+        border-radius: 4px;
+        box-shadow: var(--shadow-medium);
+        z-index: 10005; 
+        font-size: 0.85rem;
+        line-height: 1.4;
+        max-width: 250px;
+        text-align: left;
+        display: none; 
+        pointer-events: none; 
+    }
+    .abbr-tooltip.visible {
+        display: block;
+    }
+    [data-theme="dark"] .abbr-tooltip {
+        background-color: var(--color-surface); 
+        color: var(--color-heading); 
+    }
+
+
+    @page {
+        margin: 1in;
+    }
+    @media print {
+      body {
+        font-size: 9pt; background-color: #fff !important; color: #000 !important;
+        font-family: 'Times New Roman', Times, serif; padding-top: 0 !important;
+        line-height: var(--line-height-tight-print);
+      }
+      html { font-size: 9pt; }
+      .container {
+        width: 100%; max-width: none; padding: 0; margin: 0 auto;
+        box-shadow: none; border-radius: 0; border: none; background-color: #fff !important;
+      }
+      .pattern-tools-nav, .no-print, .footer .social-links, .skip-link, .status-message, .instruction-marker, #toggle-image-btn, .abbr-tooltip { display: none !important; }
+      
+      i.fas, i.fab, i.far, .section-icon, .instruction-marker i.fa-check { 
+          display: none !important; 
+          font-size: 0 !important; 
+          margin: 0 !important;
+          padding: 0 !important;
+          width: 0 !important;
+          height: 0 !important;
+          line-height: 0 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+      }
+      .tool-button i { display: none !important; } 
+      
+      .toggleable-section.section-is-collapsed,
+      .section-title.is-collapsed + .section-content.is-collapsed { display: none !important; }
+      .section-title.is-collapsed::after { display: none !important; }
+
+      .section-content {
+          max-height: none !important; opacity: 1 !important; display: block !important;
+          padding-top: 0.3rem !important;
+      }
+      .section-title .toggle-indicator { display: none !important; }
+      .section-title { 
+        padding: 0.3rem 0 !important; margin-bottom: 0.3rem !important; 
+        border-bottom-color: #bbb; font-size: 1.1rem; border-bottom-style: solid !important; 
+        color: #000 !important; page-break-after: avoid;
+      }
+      .section-title .section-title-text { 
+        display: inline !important;
+      }
+      
+      article.instructions, #section-instructions-main { 
+          page-break-before: avoid !important;
+      }
+      article.instructions h4, .instr-h4-number, .instr-h4-title {
+          font-size: 10pt !important; margin-top: 0.8em !important; margin-bottom: 0.4em !important;
+          color: #000 !important; border-bottom: none !important; padding-bottom: 0 !important;
+      }
+      article.instructions h4:first-of-type { margin-top: 0.2em !important; }
+      
+      /* Print styles for instruction lists */
+      article.instructions ol {
+        list-style-type: decimal !important;
+        margin-left: 2em !important; /* Standard indent for ordered lists */
+        padding-left: 0 !important; 
+      }
+      article.instructions ol li {
+        display: list-item !important;
+        padding-left: 0 !important; 
+        margin-bottom: 0.2em !important;
+        page-break-inside: avoid;
+      }
+      article.instructions li.instr-completed > .instruction-text { text-decoration: none !important; }
+
+
+      .section { page-break-inside: avoid; margin-bottom: 0.8rem; } 
+      #section-skills, #section-abbreviations {
+          page-break-inside: auto !important;
+      }
+      .glossary-list li {
+          page-break-inside: avoid; 
+      }
+
+      .pattern-header, .footer { border: none; margin-bottom: 1rem;}
+      .pattern-overview {
+        background-color: #f0f0f0 !important; border-left: 3px solid #999 !important;
+        padding: 0.4em !important; margin: 0.8em auto !important; font-size: 8.5pt;
+      }
+      .instructions .note, .instructions .pro-tip, .instructions .attention {
+        border-left-color: #999; background-color: #f0f0f0 !important;
+        padding: 0.4em; font-size: 8.5pt; margin: 0.6em 0;
+      }
+      .instructions .note::before, .instructions .pro-tip::before, .instructions .attention::before { font-weight: bold; }
+      
+      a { text-decoration: none; color: #000 !important; }
+      abbr[data-original-title] {
+        text-decoration: none !important; /* Remove underline in print */
+      }
+      abbr[data-original-title]::after { /* Show definition in print */
+        content: " (" attr(data-original-title) ")";
+        font-style: italic;
+        font-size: 0.9em;
+        color: #333;
+      }
+      a[href^="http"]:not([href*="thewoollyalchemist.com"]):not([href*="mailto:"]):after { 
+          content: " (" attr(href) ")"; font-size: 0.8em; word-break: break-all;
+      }
+      .pattern-image, .media-container img { max-width: 55% !important; margin: 0.5em auto; border: 1px solid #ccc; }
+      .media-container { background-color: transparent !important; border: none; padding: 0.3em;}
+      
+      .size-table { font-size: 8.5pt; margin: 0.8em 0; }
+      .size-table th, .size-table td { padding: 0.2rem 0.3rem; border-color: #ccc; }
+      .size-table tr.active-size-row td,
+      .size-table tr.active-size-row th[scope="row"] { 
+        background-color: transparent !important; /* Remove BG */
+        color: #000 !important; 
+        font-weight: bold;
+      }
+      .size-table tr.active-size-row th[scope="row"]::after {
+        content: " (SELECTED)";
+        font-weight: normal;
+        font-style: italic;
+        font-size: 0.9em;
+        margin-left: 4px;
+      }
+      
+      .glossary-list { background-color: #f0f0f0 !important; border-color: #ccc; padding: 0.6em; gap: 0.4em;}
+      .glossary-term, .glossary-def { font-size: 8.5pt;}
+      .glossary-list li { margin-bottom: 0.3em; } 
+      
+      :root { 
+        --color-text: #000; --color-heading: #000; --color-accent: #000;
+        --color-background: #fff; --color-surface: #fff; --color-border: #ccc;
+        --color-highlight-bg: #f0f0f0;
+      }
+      p { margin-bottom: 0.5em; line-height: var(--line-height-tight-print); }
+      ul:not(.materials-list):not(.glossary-list), ol:not(.materials-list):not(.glossary-list) { margin-bottom: 0.5em; }
+      li { margin-bottom: 0.3em; }
+      h1 {font-size: 16pt;} h2 {font-size: 13pt;} h3 {font-size: 11pt;} h4 {font-size: 10pt;}
+      
+      /* article.instructions ol, article.instructions ul:where(:not(.materials-list):not(.glossary-list)) {
+        Redundant with specific article.instructions ol rule above for print
+      } */
+      .stitch-count { font-size: 0.75rem; margin-top: 0.1rem; margin-bottom: 0.3rem; }
+      .materials-list li { margin-bottom: 0.5rem; gap: 5px; }
+      .material-label { width: 7rem; font-size: 8.5pt; }
+      .material-content { font-size: 8.5pt; }
+    }
+    
+    /* --- Responsive Toolbar Adjustments --- */
+    @media screen and (max-width: 800px) { 
+        .container { margin: calc(var(--spacing-unit)*2.5) auto; padding: calc(var(--spacing-unit)*2.5); }
+        .pattern-tools-nav { 
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch; scrollbar-width: thin;
+            scrollbar-color: var(--color-border) var(--color-surface);
+        }
+        .pattern-tools-nav::-webkit-scrollbar { height: 5px; }
+        .pattern-tools-nav::-webkit-scrollbar-track { background: var(--color-surface); }
+        .pattern-tools-nav::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px;}
+        
+        .pattern-tools-nav-content-wrapper { 
+            padding: var(--spacing-unit) calc(var(--spacing-unit)*1.25);
+            justify-content: flex-start; 
+            max-width: none; 
+            flex-wrap: nowrap; 
+        }
+
+        .tool-group { flex-shrink: 0; } 
+        .tool-group .tool-label:not(.sr-only) { display: none; }
+        .tool-button { 
+          font-size: var(--toolbar-button-font-size); 
+          padding: var(--spacing-unit); 
+        } 
+        .tool-button i { margin-right: 0; }
+        .tool-button .theme-text, .tool-button .unit-text { display: none; } 
+        
+        #unit-toggle i.fa-ruler-combined { display: none; }
+        #unit-toggle-current-unit-display { display: inline; }
+    }
+
+    @media screen and (max-width: 600px) { 
+      body { font-size: 15px; } 
+      html { font-size: 15px; }
+      .container { padding: calc(var(--spacing-unit)*2) calc(var(--spacing-unit)*1.5); margin: var(--spacing-unit) auto; }
+      .pattern-title { font-size: clamp(1.8rem, 5vw, 2.2rem); }
+      .pattern-subtitle { font-size: 1.15rem; }
+      .section-title { font-size: 1.4rem; }
+      .section-title.is-collapsed { font-size: 1.3rem; }
+      article.instructions h4 { font-size: 1.6rem; }
+      .materials-list li { flex-wrap: wrap; } 
+      .material-label { width: 100%; margin-bottom: 0.3rem; }
+      .glossary-list { padding: var(--spacing-unit); }
+      
+      .pattern-tools-nav-content-wrapper { 
+          justify-content: space-between; 
+          padding: var(--spacing-unit); 
+          flex-wrap: nowrap; 
+      }
+      .tool-group .tool-label { display: none; }
+      
+      .size-selector-group .tool-label[id="size-selector-label"],
+      .size-selector-group .size-buttons-wrapper:not(.is-open) { 
+          display: none;
+      }
+      #size-dropdown-toggle { display: inline-flex; }
+
+      .size-buttons-wrapper.is-open { 
+          display: flex;
+          flex-direction: column; 
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: var(--color-surface);
+          border: 1px solid var(--color-border);
+          border-radius: 4px;
+          box-shadow: var(--shadow-medium);
+          z-index: 1001;
+          padding: var(--spacing-unit);
+          gap: calc(var(--spacing-unit) * 0.5);
+          margin-top: 2px;
+          width: auto; 
+      }
+      .size-buttons-wrapper.is-open .size-button {
+          width: 100%; 
+          justify-content: center;
+      }
+    }
+
+     @media screen and (max-width: 480px) { 
+        .pattern-title { font-size: clamp(1.7rem, 5vw, 2rem); }
+        .pattern-subtitle { font-size: 1rem; }
+        .section-title { font-size: 1.25rem; }
+        .section-title.is-collapsed { font-size: 1.15rem; }
+        article.instructions h4 { font-size: 1.4rem; }
+        .section-title i.section-icon { font-size: 1rem; margin-right: 6px;}
+        .section-title .toggle-indicator { margin-right: 6px; }
+     }
+
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <nav class="pattern-tools-nav no-print" aria-label="Pattern Tools">
+    <div class="pattern-tools-nav-content-wrapper"> 
+        <div class="tool-group size-selector-group">
+            <span class="tool-label" id="size-selector-label">Size:</span>
+            <button id="size-dropdown-toggle" class="tool-button" aria-haspopup="true" aria-expanded="false" aria-controls="size-buttons-list">
+                Size: <span class="current-size-display" id="current-size-display-mobile">L</span> <i class="fas fa-caret-down" aria-hidden="true"></i>
+            </button>
+            <div role="radiogroup" aria-labelledby="size-selector-label" class="size-buttons-wrapper" id="size-buttons-list">
+                <button class="tool-button size-button" data-size-value="S" role="radio" aria-checked="false">S</button>
+                <button class="tool-button size-button" data-size-value="M" role="radio" aria-checked="false">M</button>
+                <button class="tool-button size-button" data-size-value="L" role="radio" aria-checked="true">L</button>
+                <button class="tool-button size-button" data-size-value="XL" role="radio" aria-checked="false">XL</button>
+            </div>
+        </div>
+        <div class="tool-group">
+            <label for="theme-toggle" class="sr-only">Toggle Theme</label>
+            <button id="theme-toggle" class="tool-button icon-only" aria-label="Toggle color theme">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span class="sr-only theme-text">Toggle Dark Mode</span>
+            </button>
+        </div>
+        <div class="tool-group font-size-controls">
+            <span class="tool-label" id="font-size-label">Font:</span>
+            <button id="font-size-decrease" class="tool-button icon-only" aria-label="Decrease font size" aria-describedby="font-size-label"><i class="fas fa-minus" aria-hidden="true"></i></button>
+            <button id="font-size-increase" class="tool-button icon-only" aria-label="Increase font size" aria-describedby="font-size-label"><i class="fas fa-plus" aria-hidden="true"></i></button>
+        </div>
+        <div class="tool-group">
+            <label for="unit-toggle" class="sr-only">Toggle Units</label>
+            <button id="unit-toggle" class="tool-button" data-current-unit="in" aria-label="Toggle measurement units">
+                <i class="fas fa-ruler-combined" aria-hidden="true"></i> 
+                <span id="unit-toggle-current-unit-display" aria-hidden="true">in</span> 
+                <span class="unit-text">Show cm</span> 
+            </button>
+        </div>
+        <div class="tool-group">
+            <button id="print-button" class="tool-button icon-only" aria-label="Print Pattern"><i class="fas fa-print" aria-hidden="true"></i></button>
+        </div>
+        <div class="tool-group">
+            <button id="reset-settings-button" class="tool-button icon-only" aria-label="Reset all settings and progress">
+                <i class="fas fa-undo" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div> 
+  </nav>
+
+  <div class="container">
+    <header class="pattern-header">
+      <h1 class="pattern-title">The Aurora Ribbed Beanie</h1>
+      <h2 class="pattern-subtitle">A chic and cozy knit by The Woolly Alchemist</h2>
+      
+      <div class="pattern-overview">
+          <p>The Aurora Ribbed Beanie is a cozy, stretchy hat designed with warmth and elegance in mind, featuring a snug 2x2 ribbed fabric and neatly shaped crown. Perfect for knitters comfortable with basic knitting in the round, this project utilizes ribbing and simple <abbr title="knit 2 stitches together">k2tog</abbr> decreases. It's an excellent choice for a quick gift or a stylish addition to your own wardrobe.</p>
+          <p><strong>Skill Level:</strong> Adventurous Beginner | <strong>Estimated Time:</strong> <span class="size-dynamic" data-size-key="approxTime">4-7</span> hours</p>
+      </div>
+
+      <div class="pattern-image-wrapper">
+        <img src="https://via.placeholder.com/700x525/F0E0D0/3A3A3A?text=Aurora+Beanie" alt="Styled photo of the finished Aurora Ribbed Beanie" class="pattern-image" loading="lazy">
+        <button id="toggle-image-btn" class="tool-button icon-only no-print" aria-label="Hide pattern image" aria-pressed="true">
+            <i class="fas fa-eye-slash"></i>
+        </button>
+      </div>
+      
+    </header>
+    
+    <main id="main-content">
+      <section class="toggleable-section section" id="section-intro-notes">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-intro-notes">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-feather-alt section-icon" aria-hidden="true"></i><span class="section-title-text">Introduction & Notes</span>
+        </h3>
+        <div class="section-content" id="content-intro-notes"> 
+            <p>Welcome to the Aurora Beanie pattern. This design emphasizes clarity and an enjoyable making process. Please read through the entire pattern before beginning.</p>
+            <p><strong>Key Pattern Notes:</strong></p>
+            <ul>
+              <li>The hat is worked in the round from the bottom up.</li>
+              <li>Sized S (M, L, XL). Numbers are given as S (M, L, XL) e.g., (<strong class="size-dynamic" data-size-key="exampleCastOn">110</strong> <abbr title="stitch(es)">sts</abbr>). If only one number is provided, it applies to all sizes. The selected size's numbers will be bolded in the instructions.</li>
+              <li>Slip the <abbr title="beginning of round">BOR</abbr> marker on every round.</li>
+              <li><strong>Gauge is critical.</strong> Adjust needle size if your gauge differs. More stitches per inch means you need larger needles; fewer stitches per inch means smaller needles.</li>
+              <li>For sizes S and L, the 2x2 rib at the join will be slightly offset (ending with K2). This is generally not noticeable. Sizes M and XL will end the rib round with P2.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="toggleable-section section" id="section-sizing">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-sizing">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-user-friends section-icon" aria-hidden="true"></i><span class="section-title-text">Sizing Information</span>
+        </h3>
+        <div class="section-content" id="content-sizing"> 
+            <p>This beanie is designed in <strong>4 sizes: S (M, L, XL)</strong>. The sample shown is size L on a model with a <span class="unit-dynamic" data-base-value="22.5" data-unit-type="length">22.5-inch</span> head.</p>
+            <p><strong>Fit Notes:</strong> This hat is designed with approximately <span class="unit-dynamic" data-base-value="2" data-unit-type="length_range_start">2</span>-<span class="unit-dynamic" data-base-value="3" data-unit-type="length_range_end">3 inches</span> (<span class="unit-dynamic" data-base-value="5" data-unit-type="length_range_start">5</span>-<span class="unit-dynamic" data-base-value="7.5" data-unit-type="length_range_end">7.5 <abbr title="centimeters">cm</abbr></span>) of negative ease for a snug fit. The 2x2 ribbed fabric is very stretchy and will accommodate a range of head sizes within each listed size.</p>
+            <p>Select your size based on the 'Fits Head Circumference' in the table below. If between sizes, consider sizing down for a very snug fit or sizing up for a slightly more relaxed (but still fitted) feel.</p>
+                        
+            <div class="size-table-container">
+                <table class="size-table" aria-describedby="sizingTableDescription">
+                  <caption id="sizingTableDescription" class="sr-only">Sizing chart detailing head circumference, finished hat measurements, and approximate yarn needed for sizes S, M, L, and XL. Click a row to select size.</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Size</th>
+                      <th scope="col">Fits Head Circum.</th>
+                      <th scope="col">Finished Hat Circum. (unstretched)</th>
+                      <th scope="col">Finished Hat Height (approx.)</th>
+                      <th scope="col">Approx. Yarn</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-size-row="S" tabindex="0" role="button" aria-label="Select Size Small">
+                      <th scope="row"><strong>S</strong></th>
+                      <td><span class="unit-dynamic" data-base-value="19-20" data-unit-type="length_range_text">19–20"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="17" data-unit-type="length">17"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="8" data-unit-type="length">8"</span></td>
+                      <td><span class="size-dynamic" data-size-key="yarnAmountYards">120</span> yds / <span class="size-dynamic" data-size-key="yarnAmountMeters">110</span> m</td>
+                    </tr>
+                    <tr data-size-row="M" tabindex="0" role="button" aria-label="Select Size Medium">
+                      <th scope="row"><strong>M</strong></th>
+                      <td><span class="unit-dynamic" data-base-value="21-22" data-unit-type="length_range_text">21–22"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="19" data-unit-type="length">19"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="8.5" data-unit-type="length">8.5"</span></td>
+                      <td><span class="size-dynamic" data-size-key="yarnAmountYards">140</span> yds / <span class="size-dynamic" data-size-key="yarnAmountMeters">128</span> m</td>
+                    </tr>
+                    <tr data-size-row="L" tabindex="0" role="button" aria-label="Select Size Large">
+                      <th scope="row"><strong>L</strong></th>
+                      <td><span class="unit-dynamic" data-base-value="23-24" data-unit-type="length_range_text">23–24"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="21" data-unit-type="length">21"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="9" data-unit-type="length">9"</span></td>
+                      <td><span class="size-dynamic" data-size-key="yarnAmountYards">160</span> yds / <span class="size-dynamic" data-size-key="yarnAmountMeters">146</span> m</td>
+                    </tr>
+                    <tr data-size-row="XL" tabindex="0" role="button" aria-label="Select Size Extra Large">
+                      <th scope="row"><strong>XL</strong></th>
+                      <td><span class="unit-dynamic" data-base-value="24-25" data-unit-type="length_range_text">24–25"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="22" data-unit-type="length">22"</span></td>
+                      <td>~<span class="unit-dynamic" data-base-value="9.5" data-unit-type="length">9.5"</span></td>
+                      <td><span class="size-dynamic" data-size-key="yarnAmountYards">180</span> yds / <span class="size-dynamic" data-size-key="yarnAmountMeters">165</span> m</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+      </section>
+
+      <section class="toggleable-section section" id="section-materials">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-materials">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-shopping-basket section-icon" aria-hidden="true"></i><span class="section-title-text">Materials</span>
+        </h3>
+        <div class="section-content" id="content-materials"> 
+            <ul class="materials-list">
+              <li>
+                <span class="material-label"><i class="fas fa-paint-brush" aria-hidden="true"></i>Yarn:</span>
+                <span class="material-content">
+                  Worsted weight yarn (CYC 4). Approx.
+                  <strong><span class="size-dynamic" data-size-key="yarnAmountYards">160</span> yds</strong> /
+                  <strong><span class="size-dynamic" data-size-key="yarnAmountMeters">146</span> m</strong>. (See Sizing Table for specific amounts per size).
+                  <br>
+                  <em>Recommended: Soft merino or alpaca blend (e.g., Malabrigo Worsted, Rowan Pure Wool Worsted).</em>
+                  <br><strong>Yarn Substitution Notes:</strong> Any worsted-weight yarn that achieves gauge and has good elasticity can be used. Wool or wool blends are recommended for warmth, stretch, and stitch definition in the ribbing.
+                </span>
+              </li>
+              <li>
+                <span class="material-label"><i class="fas fa-magic" aria-hidden="true"></i>Needles:</span>
+                <span class="material-content">
+                  - US 7 (<span class="unit-dynamic" data-base-value="4.5" data-unit-type="mm_needle">4.5 <abbr title="millimeters">mm</abbr></span>) circular needles, 16-inch (<span class="unit-dynamic" data-base-value="40" data-unit-type="cm_cord">40 <abbr title="centimeters">cm</abbr></span>) cord (for brim).<br>
+                  - US 8 (<span class="unit-dynamic" data-base-value="5.0" data-unit-type="mm_needle">5.0 <abbr title="millimeters">mm</abbr></span>) circular needles, 16-inch (<span class="unit-dynamic" data-base-value="40" data-unit-type="cm_cord">40 <abbr title="centimeters">cm</abbr></span>) cord (for body).<br>
+                  - US 8 (<span class="unit-dynamic" data-base-value="5.0" data-unit-type="mm_needle">5.0 <abbr title="millimeters">mm</abbr></span>) <abbr title="double-pointed needles">DPNs</abbr> or preferred method for small circumference knitting (e.g., Magic Loop) for crown.
+                </span>
+              </li>
+              <li>
+                <span class="material-label"><i class="fas fa-toolbox" aria-hidden="true"></i>Notions:</span>
+                <span class="material-content">Stitch marker (for <abbr title="beginning of round">BOR</abbr>), tapestry needle, scissors. Optional: pom-pom maker.</span>
+              </li>
+              <li>
+                <span class="material-label"><i class="fas fa-ruler-vertical" aria-hidden="true"></i>Gauge:</span>
+                <span class="material-content">
+                    <strong>20 <abbr title="stitch(es)">sts</abbr> x 26 <abbr title="round(s)">rnds</abbr></strong> = <span class="unit-dynamic" data-base-value="4" data-unit-type="length_plain">4 inches</span> (<span class="unit-dynamic" data-base-value="10" data-unit-type="length_plain">10 <abbr title="centimeters">cm</abbr></span>)
+                    in K2, P2 ribbing using US 8 (<span class="unit-dynamic" data-base-value="5.0" data-unit-type="mm_needle">5.0 <abbr title="millimeters">mm</abbr></span>) needles, worked in the round, measured <em>unstretched after blocking</em>.
+                    <br><em><strong>To Swatch:</strong> <abbr title="cast on">CO</abbr> at least 28-32 <abbr title="stitch(es)">sts</abbr> (a multiple of 4 for K2P2 rib). Work in K2, P2 rib in the round for at least 4 inches in height. Block your swatch as you intend to block the final hat. Once dry, lay flat and measure 4 inches in the center of the swatch, away from edges, without stretching. Count the number of stitches and rows within that 4-inch area.</em>
+                </span>
+              </li>
+            </ul>
+        </div>
+      </section>
+      
+      <article class="instructions">
+        <h2 class="sr-only">Pattern Instructions</h2>
+        <section class="toggleable-section section" id="section-instructions-main">
+            <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-instructions-main">
+                <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-yarn section-icon" aria-hidden="true"></i><span class="section-title-text">Instructions</span>
+            </h3>
+            <div class="section-content" id="content-instructions-main"> 
+              <h4><span class="instr-h4-number">1.</span> <span class="instr-h4-title">Brim (2x2 Rib)</span></h4>
+              <p>Using <strong>US 7 (<span class="unit-dynamic" data-base-value="4.5" data-unit-type="mm_needle">4.5 <abbr title="millimeters">mm</abbr></span>) circular needles</strong> and a stretchy cast-on method (e.g., Long Tail <abbr title="cast on">CO</abbr>):</p>
+              <ol>
+                <li data-instr-id="brim_1"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><abbr title="cast on">CO</abbr> <strong class="size-dynamic" data-size-key="castOnSts">110</strong> <abbr title="stitch(es)">sts</abbr>.</span></li>
+                <li data-instr-id="brim_2"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text">Place <abbr title="beginning of round">BOR</abbr> marker and join for working in the round, being careful not to twist stitches.</span></li>
+                <li data-instr-id="brim_3"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Set-up <abbr title="round(s)">Rnd</abbr>:</strong> *<abbr title="knit">K</abbr>2, <abbr title="purl">p</abbr>2; <abbr title="repeat">rep</abbr> from * to end of <abbr title="round(s)">rnd</abbr>.</span></li>
+                <li data-instr-id="brim_4"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text">Continue in 2x2 rib until brim measures <strong class="unit-dynamic size-dynamic" data-size-key="brimHeight" data-unit-type="length">2 inches</strong> (approx. <span class="unit-dynamic size-dynamic" data-size-key="brimHeightCm" data-unit-type="length">5 <abbr title="centimeters">cm</abbr></span>) from <abbr title="cast on">CO</abbr> edge, or desired length. For a folded brim, work for <span class="unit-dynamic" data-base-value="3.5-4" data-unit-type="length_range_text">3.5-4 inches</span>.</span></li>
+              </ol>
+              <div class="pro-tip">
+                For a smoother transition to the body, <abbr title="knit">knit</abbr> all stitches on the last round of ribbing (optional).
+              </div>
+
+              <h4><span class="instr-h4-number">2.</span> <span class="instr-h4-title">Body (Stockinette Stitch)</span></h4>
+              <ol>
+                <li data-instr-id="body_1"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text">Change to <strong>US 8 (<span class="unit-dynamic" data-base-value="5.0" data-unit-type="mm_needle">5.0 <abbr title="millimeters">mm</abbr></span>) circular needles</strong>.</span></li>
+                <li data-instr-id="body_2"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Main Body <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr> all <abbr title="stitch(es)">sts</abbr>.</span></li>
+                <li data-instr-id="body_3"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text">Continue in Stockinette stitch (<abbr title="knit">knit</abbr> every <abbr title="round(s)">rnd</abbr>) until the entire piece measures <strong class="unit-dynamic size-dynamic" data-size-key="bodyLengthToDecreases" data-unit-type="length">6.5 inches</strong> (approx. <span class="unit-dynamic size-dynamic" data-size-key="bodyLengthToDecreasesCm" data-unit-type="length">16.5 <abbr title="centimeters">cm</abbr></span>) from the <abbr title="cast on">CO</abbr> edge (including brim).
+                <br><em>(This is approx. <span class="unit-dynamic size-dynamic" data-size-key="stockinetteBodyLength" data-unit-type="length">4.5 inches</span> / <span class="unit-dynamic size-dynamic" data-size-key="stockinetteBodyLengthCm" data-unit-type="length">11.5 <abbr title="centimeters">cm</abbr></span> of Stockinette stitch after the brim).</em></span></li>
+              </ol>
+              <div class="note">
+                <strong>Checkpoint:</strong> Ensure hat is at the correct height before starting crown decreases.
+              </div>
+              
+              <h4><span class="instr-h4-number">3.</span> <span class="instr-h4-title">Crown Shaping</span></h4>
+              <p class="attention"><em>Switch to <abbr title="double-pointed needles">DPNs</abbr> or preferred small-circumference method when stitches become too tight on circular needles (typically after a few decrease rounds).</em></p>
+              <p>Decrease rounds are detailed below. Stitch counts are for S (M, L, XL); your selected size's values will be bolded.</p>
+
+              <ol>
+                <li data-instr-id="crown_1"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 1:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd1Knit">9</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd1Sts">100</span></span></li>
+                <li data-instr-id="crown_2"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_3"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 2:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd2Knit">8</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd2Sts">90</span></span></li>
+                <li data-instr-id="crown_4"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_5"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 3:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd3Knit">7</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd3Sts">80</span></span></li>
+                <li data-instr-id="crown_6"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_7"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 4:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd4Knit">6</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd4Sts">70</span></span></li>
+                <li data-instr-id="crown_8"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_9"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 5:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd5Knit">5</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd5Sts">60</span></span></li>
+                <li data-instr-id="crown_10"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_11"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 6:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd6Knit">4</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd6Sts">50</span></span></li>
+                <li data-instr-id="crown_12"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_13"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 7:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd7Knit">3</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd7Sts">40</span></span></li>
+                <li data-instr-id="crown_14"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Next <abbr title="round(s)">Rnd</abbr>:</strong> <abbr title="knit">Knit</abbr>.</span></li>
+                <li data-instr-id="crown_15"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 8:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd8Knit">2</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd8Sts">30</span></span></li>
+                <li data-instr-id="crown_16" data-size-specific-instruction="S_hide M_show L_show XL_show"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 9:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd9Knit">1</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd9Sts">20</span></span></li>
+                <li data-instr-id="crown_17" data-size-specific-instruction="S_hide M_hide L_show XL_show"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 10:</strong> *<abbr title="knit">K</abbr><span class="size-dynamic" data-size-key="decRnd10Knit">0</span>, <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr> (i.e., <abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr>); <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd10Sts">10</span></span></li>
+                <li data-instr-id="crown_18" data-size-specific-instruction="S_hide M_hide L_hide XL_show"><span class="instruction-marker" role="checkbox" aria-checked="false" tabindex="0"><i class="fas fa-check"></i></span><span class="instruction-text"><strong>Dec <abbr title="round(s)">Rnd</abbr> 11 (XL Only):</strong> *<abbr title="knit 2 stitches together (right-leaning decrease)">K2tog</abbr>; <abbr title="repeat">rep</abbr> from * to end. <span class="stitch-count size-dynamic" data-size-key="decRnd11Sts">10</span></span></li>
+              </ol>
+              <div class="pro-tip">
+                When using <abbr title="double-pointed needles">DPNs</abbr>, pull the yarn slightly tighter on the first stitch of each new needle to prevent ladders.
+              </div>
+            </div>
+        </section>
+      </article> 
+      
+      <section class="toggleable-section section" id="section-visuals">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-visuals">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-image section-icon" aria-hidden="true"></i><span class="section-title-text">Visual Aids</span>
+        </h3>
+        <div class="section-content" id="content-visuals"> 
+            <div class="media-container">
+              <img src="https://via.placeholder.com/450x300/F0E0D0/3A3A3A?text=Crown+Decrease+Spiral" alt="Illustration of crown decreases forming a spiral" class="illustration" loading="lazy">
+              <p class="caption"><em>Crown decreases will form a spiral or star shape at the top of the hat.</em></p>
+            </div>
+        </div>
+      </section>
+      
+      <section class="toggleable-section section" id="section-schematic">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-schematic">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-drafting-compass section-icon" aria-hidden="true"></i><span class="section-title-text">Schematic</span>
+        </h3>
+        <div class="section-content" id="content-schematic"> 
+            <div class="media-container">
+              <img src="https://via.placeholder.com/400x350/F0E0D0/3A3A3A?text=Beanie+Schematic" alt="Simple beanie schematic with measurements" class="schematic-img" loading="lazy">
+              <p class="caption">Measurements shown in <span class="unit-name-text">inches</span>. Refer to Sizing Table for size-specific values. (A = Finished Circumference, B = Total Height, C = Brim Height).</p>
+            </div>
+        </div>
+      </section>
+      
+      <section class="toggleable-section section" id="section-finishing">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-finishing">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-ribbon section-icon" aria-hidden="true"></i><span class="section-title-text">Finishing</span>
+        </h3>
+        <div class="section-content" id="content-finishing"> 
+            <ol>
+              <li>When <strong>10 <abbr title="stitch(es)">sts</abbr></strong> <abbr title="remaining">rem</abbr>: Cut yarn, leaving an <span class="unit-dynamic" data-base-value="8-10" data-unit-type="length_range_text">8-10 inch</span> tail.</li>
+              <li>Thread tail onto a tapestry needle. Pass needle through <abbr title="remaining">rem</abbr> 10 <abbr title="stitch(es)">sts</abbr> as if to purl, slipping them off <abbr title="double-pointed needles">DPNs</abbr>.</li>
+              <li>Pull tail firmly to close the top opening.</li>
+              <li>Bring yarn tail to the inside of the hat. Secure with a few knots and weave in the end.</li>
+              <li>Weave in the <abbr title="cast on">CO</abbr> tail at the brim. <a href="#video-tutorials" class="no-print">[Video Tutorials]</a></li>
+              <li><strong>Blocking (Recommended):</strong> Gently wash beanie according to yarn care instructions. Squeeze out excess water (do not wring). Lay flat to dry, or shape over a balloon or bowl for a rounded crown. Blocking evens out stitches.</li>
+              <li><strong>Optional:</strong> Add a pom-pom.</li>
+            </ol>
+            <p style="margin-top: var(--spacing-unit); text-align: center; font-size: 1.2rem; font-family: var(--font-primary); color: var(--color-success);"><strong>Congratulations on finishing your Aurora Beanie!</strong> <i class="fas fa-hat-wizard" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i></p>
+        </div>
+      </section>
+
+      <section class="toggleable-section section" id="section-skills">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-skills">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-graduation-cap section-icon" aria-hidden="true"></i><span class="section-title-text">Required Skills</span>
+        </h3>
+        <div class="section-content" id="content-skills"> 
+            <p>This pattern utilizes the following knitting techniques. Video links can be found in the <a href="#video-tutorials">Support section</a>.</p>
+            <ul class="glossary-list">
+                <li><strong class="glossary-term">Long-Tail Cast-On:</strong> A common, stretchy method for casting on stitches.</li>
+                <li><strong class="glossary-term">Knitting in the Round:</strong> Creating a seamless tube of fabric using circular or double-pointed needles. Ensure stitches are not twisted when joining.</li>
+                <li><strong class="glossary-term"><abbr title="knit">Knit</abbr> (k) & <abbr title="purl">Purl</abbr> (p) stitches:</strong> The fundamental stitches of knitting.</li>
+                <li><strong class="glossary-term">2x2 Ribbing:</strong> A pattern of *K2, P2* repeated to create a stretchy, textured fabric.</li>
+                <li><strong class="glossary-term">Stockinette Stitch (in the round):</strong> Achieved by knitting all stitches of every round.</li>
+                <li><strong class="glossary-term"><abbr title="knit 2 stitches together (right-leaning decrease)">Knit 2 Together (k2tog)</abbr>:</strong> A common right-leaning decrease, reducing stitch count by one.</li>
+                <li><strong class="glossary-term">Working with <abbr title="double-pointed needles">DPNs</abbr> / Magic Loop:</strong> Methods for knitting small circumferences, such as the crown of a hat.</li>
+                <li><strong class="glossary-term">Weaving in Ends:</strong> Neatly securing yarn tails into the fabric.</li>
+                <li><strong class="glossary-term">Blocking:</strong> Wetting or steaming finished knitting to even out stitches and achieve final dimensions.</li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="toggleable-section section" id="section-abbreviations">
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-abbreviations">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-language section-icon" aria-hidden="true"></i><span class="section-title-text">Abbreviations</span>
+        </h3>
+        <div class="section-content" id="content-abbreviations"> 
+            <ul class="glossary-list">
+              <li><strong id="abbr-approx" class="glossary-term">approx</strong><span class="glossary-def">approximately</span></li>
+              <li><strong id="abbr-BOR" class="glossary-term">BOR</strong><span class="glossary-def">beginning of round</span></li>
+              <li><strong id="abbr-cm" class="glossary-term"><abbr title="centimeters">cm</abbr></strong><span class="glossary-def">centimeter(s)</span></li>
+              <li><strong id="abbr-CO" class="glossary-term">CO</strong><span class="glossary-def">cast on</span></li>
+              <li><strong id="abbr-DPNs" class="glossary-term">DPNs</strong><span class="glossary-def">double-pointed needles</span></li>
+              <li><strong id="abbr-k" class="glossary-term">k</strong><span class="glossary-def">knit</span></li>
+              <li><strong id="abbr-k2tog" class="glossary-term">k2tog</strong><span class="glossary-def">knit 2 <abbr title="stitch(es)">sts</abbr> together (right-leaning decrease)</span></li>
+              <li><strong id="abbr-p" class="glossary-term">p</strong><span class="glossary-def">purl</span></li>
+              <li><strong id="abbr-pm" class="glossary-term">pm</strong><span class="glossary-def">place marker</span></li>
+              <li><strong id="abbr-rem" class="glossary-term">rem</strong><span class="glossary-def">remaining</span></li>
+              <li><strong id="abbr-rep" class="glossary-term">rep</strong><span class="glossary-def">repeat</span></li>
+              <li><strong id="abbr-rnd" class="glossary-term">rnd(s)</strong><span class="glossary-def">round(s)</span></li>
+              <li><strong id="abbr-sm" class="glossary-term">sm</strong><span class="glossary-def">slip marker</span></li>
+              <li><strong id="abbr-sts" class="glossary-term">st(s)</strong><span class="glossary-def">stitch(es)</span></li>
+              <li><strong id="abbr-in" class="glossary-term">" / in</strong><span class="glossary-def">inch(es)</span></li>
+            </ul>
+        </div>
+      </section>
+      
+      <section class="support-section no-print toggleable-section section" id="video-tutorials" aria-labelledby="support-heading"> 
+        <h3 class="section-title" role="button" tabindex="0" aria-expanded="true" aria-controls="content-support" id="support-heading">
+            <span class="toggle-indicator" aria-hidden="true">+</span><i class="fas fa-life-ring section-icon" aria-hidden="true"></i><span class="section-title-text">Support & Sharing</span>
+        </h3>
+        <div class="section-content" id="content-support"> 
+            <p>If you need assistance or wish to share your finished project:</p>
+            <ul>
+              <li><strong>Video Tutorials (External Links):</strong>
+                <ul style="margin-left:1rem; margin-top:0.5rem; list-style-type: circle;">
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+long+tail+cast+on" target="_blank" rel="noopener noreferrer">Long Tail Cast-On</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+joining+in+the+round" target="_blank" rel="noopener noreferrer">Joining in the Round</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+2x2+ribbing" target="_blank" rel="noopener noreferrer">2x2 Ribbing</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+k2tog" target="_blank" rel="noopener noreferrer"><abbr title="knit 2 stitches together (right-leaning decrease)">k2tog</abbr> Decrease</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+with+DPNs" target="_blank" rel="noopener noreferrer">Using <abbr title="double-pointed needles">DPNs</abbr></a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+magic+loop" target="_blank" rel="noopener noreferrer">Magic Loop Method</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=knitting+weaving+in+ends" target="_blank" rel="noopener noreferrer">Weaving in Ends</a></li>
+                    <li><a href="https://www.youtube.com/results?search_query=blocking+knitted+hat" target="_blank" rel="noopener noreferrer">Blocking a Knitted Hat</a></li>
+                </ul>
+              </li>
+              <li><strong>Pattern Support:</strong> Email <a href="mailto:support@thewoollyalchemist.com">support@thewoollyalchemist.com</a>.</li>
+              <li><strong>Yarn Substitution:</strong> Visit our <a href="#" target="_blank" rel="noopener noreferrer">blog</a> (link to actual blog) for yarn substitution tips.</li>
+              <li><strong>Share Your Work:</strong> Post on Instagram or Ravelry with <strong>#AuroraRibbedBeanie</strong> and <strong>#TheWoollyAlchemist</strong>.</li>
+            </ul>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <p><i class="far fa-copyright" aria-hidden="true"></i> <span id="currentYear"></span> The Woolly Alchemist. All rights reserved.</p>
+      <p>This pattern is for personal, non-commercial use only. Do not copy, distribute, or sell this pattern or items made from it without permission.</p>
+      <p class="social-links no-print">Connect: 
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a> 
+        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a> 
+        <a href="#" aria-label="Ravelry"><i class="fab fa-ravelry" aria-hidden="true"></i></a>
+      </p>
+    </footer>
+  </div>
+  
+  <div class="status-message" role="status" aria-live="polite" aria-atomic="true"></div>
+  <!-- Tooltip element will be added here by JS -->
+
+  <script>
+    // --- CONFIGURATION ---
+    const SIZES_DATA = { 
+        S: { name: "Small (S)", abbr: "S", approxTime: "3-5", yarnAmountYards: 120, yarnAmountMeters: 110, exampleCastOn: 90, castOnSts: 90, brimHeight: 2, brimHeightCm: 5, bodyLengthToDecreases: 6, bodyLengthToDecreasesCm: 15, stockinetteBodyLength: 4, stockinetteBodyLengthCm: 10, decRnd1Knit: 7, decRnd1Sts: 80, decRnd2Knit: 6, decRnd2Sts: 70, decRnd3Knit: 5, decRnd3Sts: 60, decRnd4Knit: 4, decRnd4Sts: 50, decRnd5Knit: 3, decRnd5Sts: 40, decRnd6Knit: 2, decRnd6Sts: 30, decRnd7Knit: 1, decRnd7Sts: 20, decRnd8Knit: 0, decRnd8Sts: 10, },
+        M: { name: "Medium (M)", abbr: "M", approxTime: "4-6", yarnAmountYards: 140, yarnAmountMeters: 128, exampleCastOn: 100, castOnSts: 100, brimHeight: 2, brimHeightCm: 5, bodyLengthToDecreases: 6.5, bodyLengthToDecreasesCm: 16.5, stockinetteBodyLength: 4.5, stockinetteBodyLengthCm: 11.5, decRnd1Knit: 8, decRnd1Sts: 90, decRnd2Knit: 7, decRnd2Sts: 80, decRnd3Knit: 6, decRnd3Sts: 70, decRnd4Knit: 5, decRnd4Sts: 60, decRnd5Knit: 4, decRnd5Sts: 50, decRnd6Knit: 3, decRnd6Sts: 40, decRnd7Knit: 2, decRnd7Sts: 30, decRnd8Knit: 1, decRnd8Sts: 20, decRnd9Knit: 0, decRnd9Sts: 10, },
+        L: { name: "Large (L)", abbr: "L", approxTime: "4-7", yarnAmountYards: 160, yarnAmountMeters: 146, exampleCastOn: 110, castOnSts: 110, brimHeight: 2, brimHeightCm: 5, bodyLengthToDecreases: 6.5, bodyLengthToDecreasesCm: 16.5, stockinetteBodyLength: 4.5, stockinetteBodyLengthCm: 11.5, decRnd1Knit: 9, decRnd1Sts: 100, decRnd2Knit: 8, decRnd2Sts: 90, decRnd3Knit: 7, decRnd3Sts: 80, decRnd4Knit: 6, decRnd4Sts: 70, decRnd5Knit: 5, decRnd5Sts: 60, decRnd6Knit: 4, decRnd6Sts: 50, decRnd7Knit: 3, decRnd7Sts: 40, decRnd8Knit: 2, decRnd8Sts: 30, decRnd9Knit: 1, decRnd9Sts: 20, decRnd10Knit: 0, decRnd10Sts: 10, },
+        XL: { name: "Extra Large (XL)", abbr: "XL", approxTime: "5-8", yarnAmountYards: 180, yarnAmountMeters: 165, exampleCastOn: 120, castOnSts: 120, brimHeight: 2, brimHeightCm: 5, bodyLengthToDecreases: 7, bodyLengthToDecreasesCm: 18, stockinetteBodyLength: 5, stockinetteBodyLengthCm: 13, decRnd1Knit: 10, decRnd1Sts: 110, decRnd2Knit: 9, decRnd2Sts: 100, decRnd3Knit: 8, decRnd3Sts: 90, decRnd4Knit: 7, decRnd4Sts: 80, decRnd5Knit: 6, decRnd5Sts: 70, decRnd6Knit: 5, decRnd6Sts: 60, decRnd7Knit: 4, decRnd7Sts: 50, decRnd8Knit: 3, decRnd8Sts: 40, decRnd9Knit: 2, decRnd9Sts: 30, decRnd10Knit: 1, decRnd10Sts: 20, decRnd11Sts: 10, }
+    };
+    const INCH_TO_CM = 2.54;
+    const FONT_SIZES_CONFIG = { min: 14, max: 20, step: 1, default: 16 };
+    const DEFAULT_THEME = 'light';
+    const DEFAULT_SIZE = 'L';
+    const DEFAULT_UNIT = 'in';
+    const DEFAULT_FONT_SIZE = FONT_SIZES_CONFIG.default;
+    const LS_INSTRUCTION_PREFIX = 'auroraBeanieProgress_';
+    const LS_IMAGE_VISIBLE_KEY = 'auroraBeanieImageVisible';
+    const MOBILE_BREAKPOINT = 600; 
+
+    let currentBaseFontSize = FONT_SIZES_CONFIG.default;
+    let currentSize = DEFAULT_SIZE; 
+    let currentUnit = DEFAULT_UNIT; 
+    let statusTimeout;
+    let resizeTimeout;
+
+    const htmlElement = document.documentElement;
+    const bodyElement = document.body;
+    const patternToolsNav = document.querySelector('.pattern-tools-nav');
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeToggleIcon = themeToggleButton.querySelector('i');
+    const themeTextSpanSR = themeToggleButton.querySelector('.theme-text');
+    const fontSizeDecreaseButton = document.getElementById('font-size-decrease');
+    const fontSizeIncreaseButton = document.getElementById('font-size-increase');
+    const unitToggleButton = document.getElementById('unit-toggle');
+    const unitTextSpan = unitToggleButton.querySelector('.unit-text'); 
+    const unitTextMobileDisplay = document.getElementById('unit-toggle-current-unit-display'); 
+    const printButton = document.getElementById('print-button');
+    const resetSettingsButton = document.getElementById('reset-settings-button'); 
+    
+    const sizeDropdownToggleButton = document.getElementById('size-dropdown-toggle');
+    const currentSizeMobileDisplay = document.getElementById('current-size-display-mobile');
+    const sizeButtonWrapper = document.getElementById('size-buttons-list'); 
+    const sizeButtons = sizeButtonWrapper.querySelectorAll('.tool-button.size-button'); 
+
+    const sizingTableBody = document.querySelector('.size-table tbody');
+    const dynamicSizeElements = document.querySelectorAll('.size-dynamic');
+    const dynamicUnitElements = document.querySelectorAll('.unit-dynamic');
+    const unitNameTextElements = document.querySelectorAll('.unit-name-text');
+    const sizeTableRows = document.querySelectorAll('.size-table tbody tr');
+    const sizeSpecificInstructionElements = document.querySelectorAll('[data-size-specific-instruction]');
+    const toggleableSections = document.querySelectorAll('.toggleable-section');
+    const statusMessageContainer = document.querySelector('.status-message');
+    const instructionMarkers = document.querySelectorAll('.instruction-marker');
+    const patternImageWrapper = document.querySelector('.pattern-image-wrapper');
+    const toggleImageBtn = document.getElementById('toggle-image-btn');
+    const toggleImageBtnIcon = toggleImageBtn ? toggleImageBtn.querySelector('i') : null;
+
+    let abbrTooltipElement;
+    let activeAbbrTooltipTarget = null;
+
+
+    function updateBodyPaddingTop() {
+        if (patternToolsNav) {
+            const navHeight = patternToolsNav.offsetHeight;
+            bodyElement.style.paddingTop = `${navHeight}px`;
+        }
+    }
+
+    function debounce(func, delay) {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(func, delay);
+    }
+
+    function announceStatus(message) {
+        if (statusMessageContainer) {
+            if (window.innerWidth >= MOBILE_BREAKPOINT) {
+                statusMessageContainer.textContent = message;
+                statusMessageContainer.classList.add('visible');
+                clearTimeout(statusTimeout);
+                statusTimeout = setTimeout(() => {
+                    statusMessageContainer.classList.remove('visible');
+                    setTimeout(() => { if (!statusMessageContainer.classList.contains('visible')) statusMessageContainer.textContent = ''; }, 300);
+                }, 3000);
+            } else {
+                console.log("Status (no visual):", message);
+            }
+        }
+    }
+
+    function setTheme(theme, userInitiated = false) {
+        htmlElement.setAttribute('data-theme', theme);
+        if (themeToggleIcon) themeToggleIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        if (themeTextSpanSR) themeTextSpanSR.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+        localStorage.setItem('theme', theme);
+        if (userInitiated) announceStatus(`Theme changed to ${theme} mode.`);
+    }
+
+    function applyFontSize(newSize, userInitiated = false) {
+        const sizeNum = Number(newSize);
+        if (isNaN(sizeNum)) return;
+        currentBaseFontSize = Math.max(FONT_SIZES_CONFIG.min, Math.min(FONT_SIZES_CONFIG.max, sizeNum));
+        htmlElement.style.fontSize = currentBaseFontSize + 'px'; 
+        localStorage.setItem('baseFontSize', currentBaseFontSize);
+        fontSizeDecreaseButton.disabled = (currentBaseFontSize === FONT_SIZES_CONFIG.min);
+        fontSizeIncreaseButton.disabled = (currentBaseFontSize === FONT_SIZES_CONFIG.max);
+        if (userInitiated) announceStatus(`Font size set to ${currentBaseFontSize} pixels.`);
+    }
+    
+    function safeParseFloat(value) { return parseFloat(value) || null; }
+    function formatNumber(num) { if (num === null) return ''; if (Number.isInteger(num)) return num.toString(); return parseFloat(num.toFixed(1)).toString(); }
+    
+    function updateUnits(userInitiated = false) { 
+        const isCm = currentUnit === 'cm';
+        if(unitTextSpan) unitTextSpan.textContent = isCm ? 'Show inches' : 'Show cm';
+        if(unitTextMobileDisplay) unitTextMobileDisplay.textContent = isCm ? 'cm' : 'in';
+
+        unitToggleButton.setAttribute('data-current-unit', currentUnit);
+        unitNameTextElements.forEach(el => el.textContent = isCm ? "cm" : "inches");
+        dynamicUnitElements.forEach(el => {
+            const baseValueStr = el.dataset.baseValue; 
+            const unitType = el.dataset.unitType; 
+            let displayValue = baseValueStr; 
+            let unitSuffix = isCm ? " cm" : '"';
+            
+            const abbrTag = el.querySelector('abbr');
+
+            if (unitType === 'length_range_text') {
+                const parts = baseValueStr.split(/[-–]/);
+                if (parts.length === 2) {
+                    const part1 = safeParseFloat(parts[0]);
+                    const part2 = safeParseFloat(parts[1]);
+                    if (part1 !== null && part2 !== null) {
+                        displayValue = isCm ? `${formatNumber(part1 * INCH_TO_CM)}–${formatNumber(part2 * INCH_TO_CM)}` : baseValueStr;
+                    }
+                } else { 
+                    const baseValueNum = safeParseFloat(baseValueStr);
+                    if (baseValueNum !== null) displayValue = isCm ? formatNumber(baseValueNum * INCH_TO_CM) : baseValueStr;
+                }
+                 el.textContent = displayValue + (isCm && !abbrTag ? " cm" : (abbrTag ? '' : '"')); // Add cm only if no abbr, keep " for inches if no abbr
+                 if(abbrTag && isCm && unitType.includes('length_range_end')) { // Specific for "5-7.5 cm" in fit notes
+                    abbrTag.textContent = 'cm';
+                 } else if (abbrTag && !isCm && unitType.includes('length_range_end')) {
+                     //This case does not have an abbr in the example, but good to be defensive
+                 }
+            } else {
+                const baseValueNum = safeParseFloat(baseValueStr);
+                if (baseValueNum === null) { 
+                    if (abbrTag) { // For things like "40 cm" where base value is "40" and abbr is "cm"
+                        if (unitType === 'cm_cord') {
+                           // no change to displayValue, abbrTag.textContent = 'cm'; (already is)
+                        }
+                    } else {
+                       el.textContent = baseValueStr; 
+                    }
+                    return; 
+                }
+
+
+                switch (unitType) {
+                    case 'length': case 'length_plain':
+                        displayValue = isCm ? formatNumber(baseValueNum * INCH_TO_CM) : formatNumber(baseValueNum);
+                        if (unitType === 'length_plain' && !isCm && !abbrTag) unitSuffix = " inches";
+                        else if (unitType === 'length_plain' && isCm && !abbrTag) unitSuffix = " cm";
+                        else unitSuffix = (abbrTag ? '' : (isCm ? " cm" : '"'));
+                        break;
+                    case 'length_range_start': case 'length_range_end':
+                        displayValue = isCm ? formatNumber(baseValueNum * INCH_TO_CM) : formatNumber(baseValueNum);
+                         unitSuffix = (abbrTag ? '' : (isCm ? " cm" : '"'));
+                        break;    
+                    case 'mm_needle': 
+                        displayValue = formatNumber(baseValueNum); 
+                        unitSuffix = ""; 
+                        if (abbrTag) abbrTag.textContent = 'mm';
+                        break;
+                    case 'cm_cord': 
+                        displayValue = formatNumber(baseValueNum); 
+                        unitSuffix = ""; 
+                        if (abbrTag) abbrTag.textContent = 'cm';
+                        break;
+                    default: displayValue = formatNumber(baseValueNum); 
+                }
+                
+                if (abbrTag) { 
+                    el.childNodes[0].nodeValue = displayValue + " "; 
+                } else {
+                    el.textContent = displayValue + unitSuffix;
+                }
+            }
+        });
+        if (userInitiated) announceStatus(`Units changed to ${isCm ? "centimeters" : "inches"}.`);
+    }
+
+
+    function setActiveSizeButton(selectedSize) { 
+      sizeButtons.forEach(btn => { 
+        const isSelected = btn.dataset.sizeValue === selectedSize; 
+        btn.classList.toggle('active', isSelected); 
+        btn.setAttribute('aria-checked', isSelected ? 'true' : 'false'); 
+      });
+      if (currentSizeMobileDisplay && SIZES_DATA[selectedSize]) {
+        currentSizeMobileDisplay.textContent = SIZES_DATA[selectedSize].abbr || selectedSize;
+      }
+    }
+    function updateSizingTableHighlights() { 
+      sizeTableRows.forEach(row => { 
+        const rowSize = row.dataset.sizeRow; 
+        const isActive = rowSize === currentSize; 
+        row.classList.toggle('active-size-row', isActive); 
+        const yarnYardsCell = row.querySelector('td .size-dynamic[data-size-key="yarnAmountYards"]'); 
+        const yarnMetersCell = row.querySelector('td .size-dynamic[data-size-key="yarnAmountMeters"]'); 
+        if (SIZES_DATA[rowSize]) { 
+          if (yarnYardsCell) yarnYardsCell.textContent = SIZES_DATA[rowSize].yarnAmountYards; 
+          if (yarnMetersCell) yarnMetersCell.textContent = SIZES_DATA[rowSize].yarnAmountMeters; 
+        } 
+      }); 
+    }
+
+    function updateDisplayedSizes(userInitiated = false) { 
+        const sizeData = SIZES_DATA[currentSize];
+        if (!sizeData) { console.error(`Size data not found for: ${currentSize}.`); announceStatus(`Error: Data for size ${currentSize} not found.`); return; }
+        
+        setActiveSizeButton(currentSize); 
+        
+        dynamicSizeElements.forEach(el => { const key = el.dataset.sizeKey; if (sizeData.hasOwnProperty(key)) el.textContent = sizeData[key]; });
+        sizeSpecificInstructionElements.forEach(el => { const instructionRules = el.dataset.sizeSpecificInstruction; let show = true; if (instructionRules) { const rules = instructionRules.split(' '); if (rules.includes(`${currentSize}_hide`)) show = false; else if (rules.includes(`${currentSize}_show`)) show = true; } el.style.display = show ? '' : 'none'; });
+        updateSizingTableHighlights(); 
+        updateUnits(); 
+        
+        if (userInitiated) announceStatus(`Pattern size changed to ${sizeData.name || currentSize}.`);
+    }
+
+    function setInstructionStepState(marker, toBeChecked) {
+        const stepLi = marker.closest('li');
+        const stepId = stepLi.dataset.instrId;
+        if (!stepId) return;
+
+        marker.setAttribute('aria-checked', String(toBeChecked));
+        stepLi.classList.toggle('instr-completed', toBeChecked);
+        localStorage.setItem(LS_INSTRUCTION_PREFIX + stepId, String(toBeChecked));
+    }
+
+    function handleInstructionMarkerClick(clickedMarker, userInitiated = true) {
+        const stepLi = clickedMarker.closest('li');
+        const parentOl = stepLi.parentElement;
+        if (!parentOl || parentOl.tagName !== 'OL') return; 
+
+        const allLisInOl = Array.from(parentOl.children).filter(child => child.tagName === 'LI' && child.querySelector('.instruction-marker'));
+        const clickedLiIndex = allLisInOl.indexOf(stepLi);
+
+        if (clickedLiIndex === -1) return;
+
+        const isCurrentlyChecked = clickedMarker.getAttribute('aria-checked') === 'true';
+        const isNowChecking = !isCurrentlyChecked;
+
+        if (isNowChecking) { 
+            for (let i = 0; i <= clickedLiIndex; i++) {
+                const currentMarker = allLisInOl[i].querySelector('.instruction-marker');
+                if (currentMarker) setInstructionStepState(currentMarker, true);
+            }
+            // Uncheck subsequent steps only if user initiated the check (not during load)
+            // And only if we are *not* checking the last item (which implies completing all previous)
+            if (userInitiated) { // Simplified: always uncheck subsequent if checking this one
+                for (let i = clickedLiIndex + 1; i < allLisInOl.length; i++) {
+                    const currentMarker = allLisInOl[i].querySelector('.instruction-marker');
+                    if (currentMarker) setInstructionStepState(currentMarker, false);
+                }
+            }
+            if (userInitiated) announceStatus(`Steps 1 through ${clickedLiIndex + 1} marked complete.`);
+        } else { 
+            for (let i = clickedLiIndex; i < allLisInOl.length; i++) {
+                const currentMarker = allLisInOl[i].querySelector('.instruction-marker');
+                if (currentMarker) setInstructionStepState(currentMarker, false);
+            }
+            if (userInitiated) announceStatus(`Steps ${clickedLiIndex + 1} through ${allLisInOl.length} marked incomplete.`);
+        }
+    }
+    
+    function loadInstructionProgress() {
+        instructionMarkers.forEach(marker => {
+            const stepLi = marker.closest('li');
+            const stepId = stepLi.dataset.instrId;
+            if (!stepId) return;
+            const savedState = localStorage.getItem(LS_INSTRUCTION_PREFIX + stepId);
+            const shouldBeChecked = savedState === 'true';
+            // Pass false for userInitiated to prevent unchecking logic during load
+            setInstructionStepState(marker, shouldBeChecked); 
+        });
+    }
+
+    function toggleMainImage(userInitiated = true) {
+        if (!patternImageWrapper || !toggleImageBtn || !toggleImageBtnIcon) return;
+        const isHidden = patternImageWrapper.classList.toggle('image-hidden');
+        
+        toggleImageBtn.setAttribute('aria-pressed', String(!isHidden));
+        if (isHidden) {
+            toggleImageBtnIcon.className = 'fas fa-eye';
+            toggleImageBtn.setAttribute('aria-label', 'Show pattern image');
+            if(userInitiated) announceStatus('Pattern image hidden.');
+        } else {
+            toggleImageBtnIcon.className = 'fas fa-eye-slash';
+            toggleImageBtn.setAttribute('aria-label', 'Hide pattern image');
+            if(userInitiated) announceStatus('Pattern image shown.');
+        }
+        localStorage.setItem(LS_IMAGE_VISIBLE_KEY, String(!isHidden));
+    }
+
+    function loadMainImageVisibility() {
+        if (!patternImageWrapper || !toggleImageBtn) return;
+        const savedVisibility = localStorage.getItem(LS_IMAGE_VISIBLE_KEY);
+        const shouldBeVisible = (savedVisibility === null) ? true : (savedVisibility === 'true'); // Default to visible
+
+        if (!shouldBeVisible) { 
+            patternImageWrapper.classList.add('image-hidden');
+            toggleImageBtn.setAttribute('aria-pressed', 'false');
+            if(toggleImageBtnIcon) toggleImageBtnIcon.className = 'fas fa-eye';
+            toggleImageBtn.setAttribute('aria-label', 'Show pattern image');
+        } else { 
+            patternImageWrapper.classList.remove('image-hidden');
+            toggleImageBtn.setAttribute('aria-pressed', 'true');
+            if(toggleImageBtnIcon) toggleImageBtnIcon.className = 'fas fa-eye-slash';
+            toggleImageBtn.setAttribute('aria-label', 'Hide pattern image');
+        }
+    }
+    
+    function resetAllSettings(userInitiated = true) {
+        localStorage.removeItem('theme');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        setTheme(prefersDarkScheme.matches ? 'dark' : DEFAULT_THEME, false);
+
+        localStorage.removeItem('baseFontSize');
+        applyFontSize(DEFAULT_FONT_SIZE, false);
+
+        localStorage.removeItem('unitPreference');
+        currentUnit = DEFAULT_UNIT; 
+        updateUnits(false);
+
+        localStorage.removeItem('selectedSize');
+        currentSize = DEFAULT_SIZE; 
+        updateDisplayedSizes(false);
+
+
+        toggleableSections.forEach(section => {
+            const sectionId = section.id;
+            localStorage.removeItem(`toggleState_${sectionId}`);
+            const title = section.querySelector('.section-title');
+            const content = section.querySelector('.section-content');
+            const indicator = title.querySelector('.toggle-indicator');
+            const isInitiallyCollapsed = false; // Default to expanded
+
+            content.classList.remove('is-collapsed'); // Ensure expanded
+            title.setAttribute('aria-expanded', 'true');
+            title.classList.remove('is-collapsed'); 
+            section.classList.remove('section-is-collapsed'); 
+            if (indicator) indicator.textContent = '−'; // Expanded indicator
+        });
+        
+        instructionMarkers.forEach(marker => {
+            const stepLi = marker.closest('li');
+            const stepId = stepLi.dataset.instrId;
+            if (stepId) localStorage.removeItem(LS_INSTRUCTION_PREFIX + stepId);
+            setInstructionStepState(marker, false); // Uncheck all
+        });
+        // loadInstructionProgress(); // Not needed, setInstructionStepState(marker, false) handles it
+
+        localStorage.removeItem(LS_IMAGE_VISIBLE_KEY);
+        loadMainImageVisibility(); // This will reset to default visibility (visible)
+
+        if (userInitiated) announceStatus("All settings and progress reset to defaults.");
+    }
+
+    function toggleSizeDropdown(forceClose = false) {
+        if (!sizeDropdownToggleButton || !sizeButtonWrapper) return;
+        const isOpen = sizeButtonWrapper.classList.contains('is-open');
+        if (forceClose || isOpen) {
+            sizeButtonWrapper.classList.remove('is-open');
+            sizeDropdownToggleButton.setAttribute('aria-expanded', 'false');
+        } else {
+            sizeButtonWrapper.classList.add('is-open');
+            sizeDropdownToggleButton.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    function initAbbrTooltips() {
+        abbrTooltipElement = document.createElement('div');
+        abbrTooltipElement.id = 'abbr-tooltip';
+        abbrTooltipElement.className = 'abbr-tooltip no-print'; 
+        abbrTooltipElement.setAttribute('role', 'tooltip');
+        abbrTooltipElement.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(abbrTooltipElement);
+
+        const showTooltip = (abbrElem) => {
+            const originalTitle = abbrElem.dataset.originalTitle;
+            if (!originalTitle || !abbrTooltipElement) return;
+
+            activeAbbrTooltipTarget = abbrElem;
+            abbrTooltipElement.textContent = originalTitle;
+            abbrTooltipElement.classList.add('visible');
+            abbrTooltipElement.setAttribute('aria-hidden', 'false');
+
+            const abbrRect = abbrElem.getBoundingClientRect();
+            const tooltipRect = abbrTooltipElement.getBoundingClientRect(); 
+
+            let top = abbrRect.bottom + window.scrollY + 5; 
+            let left = abbrRect.left + window.scrollX + (abbrRect.width / 2) - (tooltipRect.width / 2);
+
+            if (left < 5) left = 5; 
+            if (left + tooltipRect.width > window.innerWidth - 5) { 
+                left = window.innerWidth - tooltipRect.width - 5; 
+            }
+            if (top + tooltipRect.height > window.innerHeight + window.scrollY && abbrRect.top - tooltipRect.height - 5 > window.scrollY ) {
+                top = abbrRect.top + window.scrollY - tooltipRect.height - 5;
+            }
+            
+            abbrTooltipElement.style.top = `${top}px`;
+            abbrTooltipElement.style.left = `${left}px`;
+        };
+
+        const hideTooltip = () => {
+            if (!abbrTooltipElement || !abbrTooltipElement.classList.contains('visible')) return;
+            abbrTooltipElement.classList.remove('visible');
+            abbrTooltipElement.setAttribute('aria-hidden', 'true');
+            abbrTooltipElement.textContent = '';
+            activeAbbrTooltipTarget = null;
+        };
+
+        document.querySelectorAll('abbr[title]').forEach(abbr => {
+            const title = abbr.getAttribute('title');
+            if (title) { 
+                abbr.dataset.originalTitle = title;
+                abbr.removeAttribute('title'); 
+            }
+            abbr.setAttribute('tabindex', '0'); 
+
+            abbr.addEventListener('mouseenter', () => {
+                if (window.innerWidth > MOBILE_BREAKPOINT) { 
+                    showTooltip(abbr);
+                }
+            });
+            abbr.addEventListener('mouseleave', () => {
+                if (window.innerWidth > MOBILE_BREAKPOINT) {
+                    if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget === abbr) {
+                        hideTooltip();
+                    }
+                }
+            });
+            abbr.addEventListener('focus', () => { showTooltip(abbr); });
+            abbr.addEventListener('blur', () => {
+                 setTimeout(() => { 
+                    if (document.activeElement !== abbr && activeAbbrTooltipTarget === abbr) {
+                         hideTooltip();
+                    }
+                }, 150);
+            });
+
+            abbr.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget === abbr) {
+                    hideTooltip();
+                } else {
+                    if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget !== abbr) {
+                        hideTooltip(); 
+                    }
+                    showTooltip(abbr);
+                }
+            });
+
+            abbr.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget === abbr) {
+                        hideTooltip();
+                    } else {
+                         if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget !== abbr) {
+                            hideTooltip();
+                        }
+                        showTooltip(abbr);
+                    }
+                } else if (e.key === 'Escape') {
+                    if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible') && activeAbbrTooltipTarget === abbr) {
+                        hideTooltip();
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (abbrTooltipElement && abbrTooltipElement.classList.contains('visible')) {
+                const target = e.target;
+                if (!target.closest('abbr[data-original-title]') && target !== abbrTooltipElement && !abbrTooltipElement.contains(target)) {
+                    hideTooltip();
+                }
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && abbrTooltipElement && abbrTooltipElement.classList.contains('visible')) {
+                hideTooltip();
+            }
+        });
+    }
+
+
+    function initialize() {
+        updateBodyPaddingTop();
+        window.addEventListener('resize', () => debounce(updateBodyPaddingTop, 100));
+
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) setTheme(savedTheme);
+        else if (prefersDarkScheme.matches) setTheme('dark');
+        else setTheme(DEFAULT_THEME);
+        prefersDarkScheme.addEventListener('change', e => { if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light'); });
+        
+        const savedFontSize = parseInt(localStorage.getItem('baseFontSize'), 10);
+        applyFontSize(isNaN(savedFontSize) ? DEFAULT_FONT_SIZE : savedFontSize);
+
+        currentUnit = localStorage.getItem('unitPreference') || DEFAULT_UNIT;
+        currentSize = localStorage.getItem('selectedSize') || DEFAULT_SIZE;
+        updateDisplayedSizes(); 
+
+        themeToggleButton.addEventListener('click', () => { setTheme(htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true); });
+        fontSizeDecreaseButton.addEventListener('click', () => applyFontSize(currentBaseFontSize - FONT_SIZES_CONFIG.step, true));
+        fontSizeIncreaseButton.addEventListener('click', () => applyFontSize(currentBaseFontSize + FONT_SIZES_CONFIG.step, true));
+        unitToggleButton.addEventListener('click', () => { currentUnit = currentUnit === 'in' ? 'cm' : 'in'; updateUnits(true); localStorage.setItem('unitPreference', currentUnit); });
+        resetSettingsButton.addEventListener('click', () => resetAllSettings(true));
+        
+        if (sizeDropdownToggleButton) {
+            sizeDropdownToggleButton.addEventListener('click', (e) => {
+                e.stopPropagation(); 
+                toggleSizeDropdown();
+            });
+        }
+        if (sizeButtonWrapper) { 
+            sizeButtonWrapper.addEventListener('click', (e) => { 
+                const button = e.target.closest('.size-button'); 
+                if (button) { 
+                    const newSize = button.dataset.sizeValue; 
+                    if (newSize !== currentSize) { 
+                        currentSize = newSize; 
+                        updateDisplayedSizes(true); 
+                        localStorage.setItem('selectedSize', currentSize); 
+                    }
+                    toggleSizeDropdown(true); 
+                } 
+            }); 
+        }
+        document.addEventListener('click', (e) => {
+            if (sizeButtonWrapper && sizeButtonWrapper.classList.contains('is-open')) {
+                if (!sizeButtonWrapper.contains(e.target) && e.target !== sizeDropdownToggleButton && !sizeDropdownToggleButton.contains(e.target)) {
+                    toggleSizeDropdown(true);
+                }
+            }
+        });
+
+
+        if (sizingTableBody) { 
+            sizingTableBody.addEventListener('click', (e) => { const row = e.target.closest('tr[data-size-row]'); if (row) { const newSize = row.dataset.sizeRow; if (newSize && newSize !== currentSize) { currentSize = newSize; updateDisplayedSizes(true); localStorage.setItem('selectedSize', currentSize); } } }); 
+            sizingTableBody.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { const row = e.target.closest('tr[data-size-row]'); if (row) { e.preventDefault(); const newSize = row.dataset.sizeRow; if (newSize && newSize !== currentSize) { currentSize = newSize; updateDisplayedSizes(true); localStorage.setItem('selectedSize', currentSize); } } } }); 
+        }
+        
+        printButton.addEventListener('click', () => window.print());
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        toggleableSections.forEach(section => {
+            const title = section.querySelector('.section-title');
+            const content = section.querySelector('.section-content');
+            const indicator = title.querySelector('.toggle-indicator');
+            const sectionId = section.id;
+            const savedState = localStorage.getItem(`toggleState_${sectionId}`);
+            let isCollapsed = (savedState !== null) ? (savedState === 'collapsed') : false; 
+            
+            function setToggleState(collapsed, userInitiated = false) {
+                content.classList.toggle('is-collapsed', collapsed);
+                title.setAttribute('aria-expanded', String(!collapsed));
+                title.classList.toggle('is-collapsed', collapsed); 
+                section.classList.toggle('section-is-collapsed', collapsed); 
+                if (indicator) indicator.textContent = collapsed ? '+' : '−';
+                localStorage.setItem(`toggleState_${sectionId}`, collapsed ? 'collapsed' : 'expanded');
+                if (userInitiated) {
+                    let sectionNameElement = title.querySelector('.section-title-text');
+                    let sectionName = sectionNameElement ? sectionNameElement.textContent.trim() : sectionId.replace('section-','').replace(/-/g,' ');
+                    announceStatus(`${sectionName} section ${collapsed ? "collapsed" : "expanded"}.`);
+                }
+            }
+            setToggleState(isCollapsed); 
+            title.addEventListener('click', () => setToggleState(!content.classList.contains('is-collapsed'), true));
+            title.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setToggleState(!content.classList.contains('is-collapsed'), true); } });
+        });
+
+        // Delegated click listener for instruction items
+        const instructionsContentMain = document.getElementById('content-instructions-main');
+        if (instructionsContentMain) {
+            instructionsContentMain.addEventListener('click', function(event) {
+                const listItem = event.target.closest('li[data-instr-id]');
+                if (listItem) {
+                    const marker = listItem.querySelector('.instruction-marker');
+                    if (marker) {
+                        // Check if the direct click target was the marker itself or its icon to prevent double handling
+                        // if the marker had its own listener. Since we are removing direct listener, this is okay.
+                        handleInstructionMarkerClick(marker, true);
+                    }
+                }
+            });
+        }
+        // Keep keydown on markers for accessibility
+        instructionMarkers.forEach(marker => {
+            marker.addEventListener('keydown', (e) => { 
+                if (e.key === 'Enter' || e.key === ' ') { 
+                    e.preventDefault(); 
+                    handleInstructionMarkerClick(marker, true); 
+                } 
+            });
+        });
+        loadInstructionProgress();
+        
+        if (toggleImageBtn) toggleImageBtn.addEventListener('click', () => toggleMainImage(true));
+        loadMainImageVisibility();
+
+        initAbbrTooltips(); 
+    }
+
+    document.addEventListener('DOMContentLoaded', initialize);
+  </script>
+</body>
+</html>

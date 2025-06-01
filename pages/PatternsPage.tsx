@@ -5,7 +5,7 @@ import { SectionTitle } from '../components/ui/SectionTitle';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { patternsData } from '../data/patternsData';
-import { Pattern, GarmentType, ConstructionType, SkillLevel, YarnWeight, FilterCategory, FilterOption, SortOption } from '../types';
+import { Pattern, GarmentType, ConstructionType, SkillLevel, YarnWeight, FilterCategory, SortOption } from '../types';
 import { AREUM_ACCENT_COLOR, PATTERN_PLACEHOLDER_IMAGE } from '../constants';
 import { AdjustmentsHorizontalIcon, ChevronDownIcon, FunnelIcon } from '@heroicons/react/24/outline';
 
@@ -137,8 +137,8 @@ export const PatternsPage: React.FC = () => {
         {/* Main Content - Patterns Grid */}
         <main className="md:w-3/4">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
-            <button 
-              onClick={() => setShowFilters(!showFilters)} 
+            <button
+              onClick={() => setShowFilters(!showFilters)}
               className={`md:hidden flex items-center space-x-2 px-4 py-2 border border-border-medium dark:border-border-medium rounded-md text-text-secondary hover:bg-bg-accent dark:hover:bg-bg-accent`}
             >
               <FunnelIcon className="h-5 w-5" />

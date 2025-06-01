@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { patternsData } from '../data/patternsData';
 import { articlesData } from '../data/articlesData';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { PATTERN_PLACEHOLDER_IMAGE, ARTICLE_PLACEHOLDER_IMAGE } from '../constants';
+import { PATTERN_PLACEHOLDER_IMAGE } from '../constants';
 
 export const HomePage: React.FC = () => {
 
@@ -22,9 +21,9 @@ export const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="text-center py-12 md:py-16 bg-bg-accent dark:bg-bg-accent rounded-lg shadow-inner">
         <div className="container mx-auto px-4">
-          <img 
+          <img
             src="https://picsum.photos/seed/areum-hands-knitting/1200/400"
-            alt="Areum's hands working on a complex cable pattern, focused and absorbed" 
+            alt="Areum's hands working on a complex cable pattern, focused and absorbed"
             className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-lg mx-auto mb-10 shadow-lg"
           />
           <h1 className="font-primary text-4xl md:text-5xl font-bold text-text-primary mb-2">
@@ -49,9 +48,9 @@ export const HomePage: React.FC = () => {
         <SectionTitle title="Current Focus" alignment="left" />
         <Card className="p-6 md:p-8">
           <div className="flex flex-col md:flex-row items-start gap-6 md:gap-8">
-            <img 
-              src="https://picsum.photos/seed/current-project-sketches/400/300" 
-              alt="Close-up of current project with design sketches" 
+            <img
+              src="https://picsum.photos/seed/current-project-sketches/400/300"
+              alt="Close-up of current project with design sketches"
               className="w-full md:w-1/3 h-auto rounded-lg shadow-md object-cover"
             />
             <div className="md:w-2/3">
@@ -67,10 +66,10 @@ export const HomePage: React.FC = () => {
                 This is exactly the kind of problem-solving that fascinates me. Same pattern, different yarn behavior, completely different solutions needed.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button to="/notebook/sleeve-cap-design-notes" variant="primary" rightIcon={ArrowRightIcon}> 
+                <Button to="/notebook/sleeve-cap-design-notes" variant="primary" rightIcon={ArrowRightIcon}>
                   Read the full process notes
                 </Button>
-                <Button to="/notebook/sleeve-cap-design-notes#mathematics" variant="outline" rightIcon={ArrowRightIcon}> 
+                <Button to="/notebook/sleeve-cap-design-notes#mathematics" variant="outline" rightIcon={ArrowRightIcon}>
                   See the math
                 </Button>
               </div>
@@ -90,7 +89,7 @@ export const HomePage: React.FC = () => {
             <p className="text-sm text-text-secondary mb-3 flex-grow">"The challenge was creating structure without bulk. I developed a modified raglan that distributes ease differently across the back—the math took weeks to work out, but the fit is transformative."</p>
             <Button to={`/patterns/${meridianCardigan.slug}`} variant="ghost" size="sm" rightIcon={ArrowRightIcon} className="self-start mt-auto">Pattern + construction notes</Button>
           </Card>
-          
+
           <Card className="p-6 flex flex-col">
             <img src={weekendPullover.imageUrl || PATTERN_PLACEHOLDER_IMAGE.replace('{seed}', 'weekend-pullover')} alt="Weekend Pullover" className="w-full h-64 object-cover rounded-md mb-4"/>
             <h3 className="font-primary text-xl font-semibold text-text-primary mb-1">Weekend Pullover</h3>
@@ -119,9 +118,9 @@ export const HomePage: React.FC = () => {
         <SectionTitle title="From My Notebook" alignment="left" />
         <div className="flex flex-col md:flex-row items-start gap-8">
           <div className="w-full md:w-1/3 flex-shrink-0">
-            <img 
-              src="https://picsum.photos/seed/notebook-flatlay/400/500" 
-              alt="Open notebook with sketches, yarn samples, and calculations" 
+            <img
+              src="https://picsum.photos/seed/notebook-flatlay/400/500"
+              alt="Open notebook with sketches, yarn samples, and calculations"
               className="w-full h-auto md:h-[480px] lg:h-[520px] object-cover rounded-lg shadow-md"
             />
           </div>
@@ -156,9 +155,9 @@ export const HomePage: React.FC = () => {
       {/* Studio Space Section */}
       <section className="bg-bg-accent dark:bg-bg-accent rounded-lg shadow-inner py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
-          <img 
-            src="https://picsum.photos/seed/areum-studio-wide/1000/400" 
-            alt="Areum's organized but lived-in workspace with beautiful yarns and tools" 
+          <img
+            src="https://picsum.photos/seed/areum-studio-wide/1000/400"
+            alt="Areum's organized but lived-in workspace with beautiful yarns and tools"
             className="w-full md:w-3/4 lg:w-2/3 max-h-[350px] object-cover rounded-lg mx-auto mb-8 shadow-lg"
           />
           <p className="font-primary text-2xl md:text-3xl text-text-primary max-w-2xl mx-auto">

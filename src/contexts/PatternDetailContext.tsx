@@ -71,7 +71,7 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
   });
 
   const availableSizes = useMemo(() => pContent ? Object.keys(pContent.sizesData || {}) : [DEFAULT_SIZE], [pContent]);
-  
+
   const [currentSize, setCurrentSize] = useState<string>(() => {
     const saved = localStorage.getItem(LS_KEYS.selectedSize);
     if (saved && availableSizes.includes(saved)) return saved;
@@ -180,10 +180,10 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
     const clickedLiIndex = allLisInOl.findIndex(li => li.getAttribute('data-instr-id') === stepId);
 
     if (clickedLiIndex === -1) return;
-    
+
     const updatedSteps = {...completedSteps};
 
-    if (newCompletedState) { 
+    if (newCompletedState) {
         for (let i = 0; i <= clickedLiIndex; i++) {
             const currentStepId = allLisInOl[i].getAttribute('data-instr-id');
             if (currentStepId) {
@@ -216,7 +216,7 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
     }
     setCompletedSteps(updatedSteps);
   };
-  
+
   const setSectionToggleState = (sectionId: string, isCollapsed: boolean) => {
     setSectionToggleStates(prev => ({ ...prev, [sectionId]: isCollapsed }));
     localStorage.setItem(LS_KEYS.sectionTogglePrefix + sectionId, String(isCollapsed));
@@ -224,7 +224,7 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
   };
 
   const resetAllPatternSettings = () => {
-    setPageTheme(initialGlobalSiteTheme); 
+    setPageTheme(initialGlobalSiteTheme);
     localStorage.removeItem(LS_KEYS.theme);
 
     setFontSize(FONT_SIZES_CONFIG.default);
@@ -236,7 +236,7 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
     const initialSize = availableSizes.length > 0 ? availableSizes[0] : DEFAULT_SIZE;
     setCurrentSize(initialSize);
     localStorage.removeItem(LS_KEYS.selectedSize);
-    
+
     setShowImage(true);
     localStorage.removeItem(LS_KEYS.imageVisible);
 
@@ -250,7 +250,7 @@ export const PatternDetailProvider: React.FC<PatternDetailProviderProps> = ({ ch
     Object.keys(sectionToggleStates).forEach(key => { // Use current sectionToggleStates keys
         localStorage.removeItem(LS_KEYS.sectionTogglePrefix + key);
     });
-    setSectionToggleStates(clearedSectionStates); 
+    setSectionToggleStates(clearedSectionStates);
 
     announceStatus("All pattern-specific settings and progress reset to defaults.");
   };

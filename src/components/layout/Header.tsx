@@ -3,7 +3,7 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { SITE_NAME, TOP_NAVIGATION, AREUM_ACCENT_COLOR } from '../../constants';
 import { MagnifyingGlassIcon, SunIcon, MoonIcon } from '@heroicons/react/24/outline';
-import { useTheme } from '../../contexts/ThemeContext';
+import { useTheme } from '../../../contexts/ThemeContext';
 
 export const Header: React.FC = () => {
   const { theme, toggleTheme } = useTheme();

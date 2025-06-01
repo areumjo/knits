@@ -6,7 +6,7 @@ import { Pattern as PatternType, PatternContent } from '../types';
 import { NotFoundPage } from './NotFoundPage';
 import { useTheme as useGlobalTheme } from '../contexts/ThemeContext';
 import { Footer } from '../components/layout/Footer';
-import { AREUM_KNITS_LIVE_URL, SITE_NAME } from '../constants';
+import { AREUM_KNITS_LIVE_URL } from '../constants';
 import { PatternDetailProvider, usePatternDetailContext } from '../src/contexts/PatternDetailContext';
 import { PatternViewToolbar } from '../src/components/pattern-detail/PatternViewToolbar';
 import { PatternViewHeader } from '../src/components/pattern-detail/PatternViewHeader';
@@ -44,7 +44,7 @@ const downloadHtmlFile = (params: DownloadHtmlParams) => {
     currentUnitVal,
     currentSizeVal,
     isImageShown,
-    announceFn, 
+    announceFn,
     siteTheme,
     initialCompletedSteps,
     initialSectionToggles
@@ -62,10 +62,10 @@ const downloadHtmlFile = (params: DownloadHtmlParams) => {
     console.error("Error: Pattern content or toolbar not found for download.");
     return;
   }
-  
+
   const clonedPatternContainer = patternContainerElement.cloneNode(true) as HTMLElement;
   clonedPatternContainer.querySelectorAll('.pdiv-no-download, #live-back-to-patterns-link-container').forEach(el => el.remove());
-  
+
   const tempToolbarDiv = document.createElement('div');
   tempToolbarDiv.innerHTML = patternToolsNavElement.innerHTML;
   tempToolbarDiv.querySelectorAll('.pdiv-no-download, #pdiv-html-download-button, [role="status"]').forEach(el => el.remove());
@@ -84,16 +84,16 @@ const downloadHtmlFile = (params: DownloadHtmlParams) => {
   const patternHTML = clonedPatternContainer.innerHTML;
   const cssContent = getPatternDetailCSS();
   const pageTitle = patternData.title || "Knitting Pattern";
-  
+
   const currentHtmlClasses = document.documentElement.className;
   const currentBodyClasses = document.body.className;
   const currentRawFontSize = document.documentElement.style.fontSize || `${FONT_SIZES_CONFIG.default}px`;
-  
+
   const currentToolbarHeight = patternToolsNavElement ? `${(patternToolsNavElement as HTMLElement).offsetHeight}px` : '60px';
 
   const savedUnit = currentUnitVal;
-  const savedSize = currentSizeVal; 
-  const defaultSizeKey = DEFAULT_SIZE; 
+  const savedSize = currentSizeVal;
+  const defaultSizeKey = DEFAULT_SIZE;
   const savedPageTheme = currentPageTheme;
   const savedFontSize = currentFontSize;
   const savedShowImage = isImageShown;
@@ -116,12 +116,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let currentSelectedSizeGlobalStatic = '${savedSize}';
   let imageVisibleGlobalStatic = ${savedShowImage};
   let completedStepsGlobalStatic = ${JSON.stringify(initialCompletedSteps)};
-  let sectionStatesGlobalStatic = ${JSON.stringify(initialSectionToggles)}; 
+  let sectionStatesGlobalStatic = ${JSON.stringify(initialSectionToggles)};
 
 
   const bodyEl = document.body;
   const htmlEl = document.documentElement;
-  const mainPatternContainer = document.querySelector('.pdiv-container'); 
+  const mainPatternContainer = document.querySelector('.pdiv-container');
   const statusMessageEl = document.getElementById('pdiv-static-status-message');
   let statusTimeoutStatic;
 
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             statusMessageEl.classList.remove('visible');
         }, 3000);
     } else {
-        console.log("Status:", message); 
+        console.log("Status:", message);
     }
   }
 
@@ -159,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return \`\${displayValue} \${isCm ? "cm" : (valStr.toLowerCase().includes("inch") ? "" : '"')}\`;
     }
-    
+
     const baseValueNum = parseFloat(valStr);
-    if (isNaN(baseValueNum)) return valStr; 
+    if (isNaN(baseValueNum)) return valStr;
 
     switch (unitType) {
         case 'length': displayValue = isCm ? (baseValueNum * inchToCm).toFixed(1) : baseValueNum.toFixed(1); unitSuffix = isCm ? " cm" : '"'; break;
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function() {
         case 'cm_cord': displayValue = baseValueNum.toFixed(1); unitSuffix = "cm"; break;
         case 'yarn_yards': displayValue = isCm ? (baseValueNum * 0.9144).toFixed(0) : baseValueNum.toFixed(0); unitSuffix = isCm ? "m" : "yds"; break;
         case 'yarn_meters': displayValue = !isCm ? (baseValueNum / 0.9144).toFixed(0) : baseValueNum.toFixed(0); unitSuffix = !isCm ? "yds" : "m"; break;
-        default: displayValue = baseValueNum.toString(); unitSuffix = ''; 
+        default: displayValue = baseValueNum.toString(); unitSuffix = '';
     }
     return \`\${displayValue}\${unitType.includes('needle') || unitType.includes('cord') || unitType.includes('yarn') ? ' ' : ''}\${unitSuffix}\`;
   }
@@ -178,13 +178,13 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateDynamicContentStatic() {
     if (!mainPatternContainer) return;
     const currentSizeData = SIZES_DATA_STATIC[currentSelectedSizeGlobalStatic] || {};
-    
+
     mainPatternContainer.querySelectorAll('.size-dynamic').forEach(el => {
       const key = el.dataset.sizeKey;
-      const fallback = el.dataset.fallback || el.innerHTML; 
+      const fallback = el.dataset.fallback || el.innerHTML;
       let valueToSet = fallback;
       if (key && currentSizeData[key] !== undefined) valueToSet = String(currentSizeData[key]);
-      
+
       let parentUnitDynamic = false;
       let currentParent = el.parentElement;
       while(currentParent) {
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (sizeKeyForUnit && currentSizeData[sizeKeyForUnit] !== undefined) {
         currentBaseValueToConvert = String(currentSizeData[sizeKeyForUnit]);
       }
-      
+
       if (currentBaseValueToConvert !== undefined && unitType) {
         const formattedValue = formatUnitDynamicStatic(currentBaseValueToConvert, unitType, currentUnitGlobalStatic, INCH_TO_CM_STATIC);
         el.innerHTML = \`<strong style="color: var(--color-accent-val); font-weight: 700;">\${formattedValue}</strong>\`;
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const fallback = el.dataset.fallback || el.textContent;
         let valueToSet = fallback;
         if (sizeKey && currentSizeData[sizeKey] !== undefined) valueToSet = String(currentSizeData[sizeKey]);
-        el.textContent = valueToSet; 
+        el.textContent = valueToSet;
     });
 
     mainPatternContainer.querySelectorAll('.pdiv-size-table tbody tr').forEach(row => {
@@ -236,13 +236,13 @@ document.addEventListener('DOMContentLoaded', function() {
       if (sunIcon && moonIcon) {
           sunIcon.style.display = currentPageThemeGlobal === 'dark' ? 'inline-block' : 'none';
           moonIcon.style.display = currentPageThemeGlobal === 'light' ? 'inline-block' : 'none';
-      } else { 
+      } else {
           themeToggleBtn.innerHTML = currentPageThemeGlobal === 'dark' ? \`${sunIconSVG}\` : \`${moonIconSVG}\`;
       }
     }
     document.getElementById('pdiv-font-size-increase').disabled = currentFontSizeGlobal >= FONT_CFG_STATIC.max;
     document.getElementById('pdiv-font-size-decrease').disabled = currentFontSizeGlobal <= FONT_CFG_STATIC.min;
-    
+
     const unitToggleBtn = document.getElementById('pdiv-unit-toggle');
     if (unitToggleBtn) {
       const unitTextEl = unitToggleBtn.querySelector('.pdiv-unit-text');
@@ -266,33 +266,33 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleImageBtnStatic.innerHTML = imageVisibleGlobalStatic ? \`${eyeSlashIconSVG}\` : \`${eyeIconSVG}\`;
     }
   }
-  
+
   function initializeStaticInteractivity() {
     document.getElementById('pdiv-theme-toggle')?.addEventListener('click', function() {
       currentPageThemeGlobal = currentPageThemeGlobal === 'light' ? 'dark' : 'light';
       bodyEl.classList.toggle('dark-theme', currentPageThemeGlobal === 'dark');
       htmlEl.classList.toggle('dark-theme-pattern-active', currentPageThemeGlobal === 'dark');
-      htmlEl.classList.toggle('dark', currentPageThemeGlobal === 'dark'); 
+      htmlEl.classList.toggle('dark', currentPageThemeGlobal === 'dark');
       updateButtonStatesStatic();
       announceStatusStatic(\`Theme set to \${currentPageThemeGlobal}\`);
     });
 
     document.getElementById('pdiv-font-size-increase')?.addEventListener('click', () => {
       currentFontSizeGlobal = Math.min(FONT_CFG_STATIC.max, currentFontSizeGlobal + FONT_CFG_STATIC.step);
-      htmlEl.style.fontSize = currentFontSizeGlobal + 'px'; 
+      htmlEl.style.fontSize = currentFontSizeGlobal + 'px';
       updateButtonStatesStatic();
       announceStatusStatic(\`Font size increased to \${currentFontSizeGlobal}px\`);
     });
     document.getElementById('pdiv-font-size-decrease')?.addEventListener('click', () => {
       currentFontSizeGlobal = Math.max(FONT_CFG_STATIC.min, currentFontSizeGlobal - FONT_CFG_STATIC.step);
-      htmlEl.style.fontSize = currentFontSizeGlobal + 'px'; 
+      htmlEl.style.fontSize = currentFontSizeGlobal + 'px';
       updateButtonStatesStatic();
       announceStatusStatic(\`Font size decreased to \${currentFontSizeGlobal}px\`);
     });
 
     document.getElementById('pdiv-unit-toggle')?.addEventListener('click', function() {
       currentUnitGlobalStatic = currentUnitGlobalStatic === 'in' ? 'cm' : 'in';
-      updateButtonStatesStatic(); 
+      updateButtonStatesStatic();
       updateDynamicContentStatic();
       announceStatusStatic(\`Units set to \${currentUnitGlobalStatic}\`);
     });
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.pdiv-size-buttons-wrapper .pdiv-size-button').forEach(button => {
       button.addEventListener('click', function() {
         currentSelectedSizeGlobalStatic = this.dataset.sizeValue;
-        updateButtonStatesStatic(); 
+        updateButtonStatesStatic();
         updateDynamicContentStatic();
         if (sizeButtonsWrapper) sizeButtonsWrapper.classList.remove('is-open');
         if (sizeDropdownToggle) sizeDropdownToggle.setAttribute('aria-expanded', 'false');
@@ -316,15 +316,15 @@ document.addEventListener('DOMContentLoaded', function() {
         announceStatusStatic(\`Size set to \${sizeName}\`);
       });
     });
-    
+
     if (mainPatternContainer) {
         mainPatternContainer.querySelectorAll('.pdiv-size-table tbody tr[data-size-row]').forEach(row => {
             row.addEventListener('click', function() {
                 const newSize = this.dataset.sizeRow;
                 if (newSize && newSize !== currentSelectedSizeGlobalStatic) {
                     currentSelectedSizeGlobalStatic = newSize;
-                    updateButtonStatesStatic(); 
-                    updateDynamicContentStatic(); 
+                    updateButtonStatesStatic();
+                    updateDynamicContentStatic();
                     const sizeName = SIZES_DATA_STATIC[currentSelectedSizeGlobalStatic]?.name || currentSelectedSizeGlobalStatic;
                     announceStatusStatic(\`Size set to \${sizeName}\`);
                 }
@@ -355,9 +355,9 @@ document.addEventListener('DOMContentLoaded', function() {
       currentPageThemeGlobal = INITIAL_GLOBAL_THEME_STATIC;
       currentFontSizeGlobal = FONT_CFG_STATIC.default;
       currentUnitGlobalStatic = DEFAULT_UNIT_STATIC;
-      currentSelectedSizeGlobalStatic = DEFAULT_SIZE_KEY_STATIC; 
+      currentSelectedSizeGlobalStatic = DEFAULT_SIZE_KEY_STATIC;
       imageVisibleGlobalStatic = true;
-      
+
       completedStepsGlobalStatic = {};
       if(mainPatternContainer) {
         mainPatternContainer.querySelectorAll('.pdiv-instructions-article li[data-instr-id]').forEach(li => {
@@ -368,12 +368,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (checkIcon) checkIcon.style.opacity = '0';
         });
       }
-      
+
       sectionStatesGlobalStatic = {};
       if(mainPatternContainer) {
         mainPatternContainer.querySelectorAll('.pdiv-toggleable-section').forEach(section => {
             const sectionId = section.id;
-            sectionStatesGlobalStatic[sectionId] = false; 
+            sectionStatesGlobalStatic[sectionId] = false;
             const title = section.querySelector('.pdiv-section-title');
             const content = section.querySelector('.pdiv-section-content');
             if (title) {
@@ -391,8 +391,8 @@ document.addEventListener('DOMContentLoaded', function() {
       htmlEl.classList.toggle('dark-theme-pattern-active', currentPageThemeGlobal === 'dark');
       htmlEl.classList.toggle('dark', currentPageThemeGlobal === 'dark');
       if (patternImageWrapperStatic) patternImageWrapperStatic.classList.remove('image-hidden');
-      
-      updateButtonStatesStatic(); 
+
+      updateButtonStatesStatic();
       updateDynamicContentStatic();
       announceStatusStatic('All settings and progress reset to defaults.');
     });
@@ -401,14 +401,14 @@ document.addEventListener('DOMContentLoaded', function() {
         mainPatternContainer.querySelectorAll('.pdiv-instructions-article li[data-instr-id]').forEach(li => {
             const stepId = li.dataset.instrId;
             const marker = li.querySelector('.pdiv-instruction-marker');
-            
+
             if (completedStepsGlobalStatic[stepId]) {
                 li.classList.add('instr-completed');
                 if (marker) marker.setAttribute('aria-checked', 'true');
                 const checkIcon = marker ? marker.querySelector('.pdiv-check-icon') : null;
                 if (checkIcon) checkIcon.style.opacity = '1'; else if (marker) marker.innerHTML = CHECK_ICON_SVG_STATIC;
             } else {
-                if (marker && !marker.querySelector('.pdiv-check-icon')) marker.innerHTML = CHECK_ICON_SVG_STATIC; 
+                if (marker && !marker.querySelector('.pdiv-check-icon')) marker.innerHTML = CHECK_ICON_SVG_STATIC;
             }
 
             const stepClickHandler = function() {
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const allLisInOl = Array.from(olParent.children).filter(child => child.tagName === 'LI' && child.dataset.instrId);
                 const clickedLiIndex = allLisInOl.findIndex(item => item.dataset.instrId === currentStepId);
-                
+
                 const newCompletedState = !completedStepsGlobalStatic[currentStepId];
 
                 if (newCompletedState) {
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         }
                     }
                      announceStatusStatic(\`Steps 1 through \${clickedLiIndex + 1} marked complete.\`);
-                } else { 
+                } else {
                     for (let i = clickedLiIndex; i < allLisInOl.length; i++) {
                         const id = allLisInOl[i].dataset.instrId;
                         if (id) {
@@ -454,14 +454,14 @@ document.addEventListener('DOMContentLoaded', function() {
               marker.addEventListener('keydown', function(e) {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault();
-                  e.stopPropagation(); 
+                  e.stopPropagation();
                   li.click();
                 }
               });
             }
         });
     }
-    
+
     if (mainPatternContainer) {
         mainPatternContainer.querySelectorAll('.pdiv-section-title').forEach(titleEl => {
             const sectionEl = titleEl.closest('.pdiv-toggleable-section');
@@ -480,7 +480,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const currentlyCollapsed = sectionStatesGlobalStatic[sectionId];
                     const newCollapsedState = !currentlyCollapsed;
                     sectionStatesGlobalStatic[sectionId] = newCollapsedState;
-                    
+
                     this.classList.toggle('is-collapsed', newCollapsedState);
                     this.setAttribute('aria-expanded', !newCollapsedState);
                     if(indicator) indicator.textContent = newCollapsedState ? '+' : '−';
@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     if (mainPatternContainer) {
         const abbrTooltipEl = document.getElementById('pdiv-abbr-tooltip-static');
         if (abbrTooltipEl) {
@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 abbr.addEventListener('mouseleave', () => {
                     abbrTooltipEl.classList.remove('visible');
                 });
-                abbr.addEventListener('focus', function() { 
+                abbr.addEventListener('focus', function() {
                      abbrTooltipEl.textContent = this.dataset.originalTitle;
                     abbrTooltipEl.classList.add('visible');
                     const rect = this.getBoundingClientRect();
@@ -526,10 +526,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (patternImageWrapperStatic) patternImageWrapperStatic.classList.toggle('image-hidden', !imageVisibleGlobalStatic);
 
     const themeBtn = document.getElementById('pdiv-theme-toggle');
-    if(themeBtn && !themeBtn.querySelector('.theme-icon-sun') && !themeBtn.querySelector('.theme-icon-moon')) { 
+    if(themeBtn && !themeBtn.querySelector('.theme-icon-sun') && !themeBtn.querySelector('.theme-icon-moon')) {
         themeBtn.innerHTML = \`<span class="theme-icon-sun" style="display: \${currentPageThemeGlobal === 'dark' ? 'inline-block' : 'none'}">\${sunIconSVG}</span><span class="theme-icon-moon" style="display: \${currentPageThemeGlobal === 'light' ? 'inline-block' : 'none'}">\${moonIconSVG}</span>\`;
     }
-    
+
     updateButtonStatesStatic();
     updateDynamicContentStatic();
   }
@@ -547,28 +547,28 @@ document.addEventListener('DOMContentLoaded', function() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>${pageTitle} - Areum Knits (Interactive Download)</title>
       <style>
-        body { 
+        body {
           margin: 0; padding: 0; box-sizing: border-box;
         }
         ${cssContent}
         body { padding-top: ${currentToolbarHeight} !important; }
         .pdiv-tools-nav { position: fixed !important; top: 0; left: 0; right: 0; z-index: 1000 !important; }
-        .pdiv-no-download { display: none !important; } 
+        .pdiv-no-download { display: none !important; }
         .pdiv-tool-button svg { height: 1.25em; width: 1.25em; display: inline-block; vertical-align: middle; }
         .pdiv-tool-button.icon-only svg { margin-right: 0; }
         #pdiv-theme-toggle .theme-icon-sun svg, #pdiv-theme-toggle .theme-icon-moon svg {
-            height: 1em; width: 1em; 
+            height: 1em; width: 1em;
         }
         .pdiv-instruction-marker[aria-checked="true"] svg.pdiv-check-icon { opacity: 1 !important; }
         svg.pdiv-check-icon { font-size: 0.7rem; color: var(--color-surface-val); opacity: 0; transition: opacity var(--animation-duration-val) var(--easing-val); width: 0.9em; height: 0.9em;}
         .dark-theme .pdiv-instruction-marker[aria-checked="true"] svg.pdiv-check-icon { color: var(--color-background-val); }
 
-        #pdiv-abbr-tooltip-static { 
-          position: absolute; background-color: var(--color-heading-val); color: var(--color-surface-val); 
-          padding: calc(var(--spacing-unit-val)*0.75) calc(var(--spacing-unit-val)*1.25); 
-          border-radius: 4px; box-shadow: var(--shadow-medium-val); z-index: 10005; 
-          font-size: 0.85rem; line-height: 1.4; max-width: 250px; text-align: left; 
-          display: none; pointer-events: none; 
+        #pdiv-abbr-tooltip-static {
+          position: absolute; background-color: var(--color-heading-val); color: var(--color-surface-val);
+          padding: calc(var(--spacing-unit-val)*0.75) calc(var(--spacing-unit-val)*1.25);
+          border-radius: 4px; box-shadow: var(--shadow-medium-val); z-index: 10005;
+          font-size: 0.85rem; line-height: 1.4; max-width: 250px; text-align: left;
+          display: none; pointer-events: none;
         }
         #pdiv-abbr-tooltip-static.visible { display: block; }
         .dark-theme #pdiv-abbr-tooltip-static { background-color: var(--color-surface-val); color: var(--color-heading-val); }
@@ -598,26 +598,26 @@ document.addEventListener('DOMContentLoaded', function() {
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    console.log("Interactive pattern HTML download started."); 
+    console.log("Interactive pattern HTML download started.");
 };
 
 
 const PatternDetailViewLogic: React.FC = () => {
-  const { 
-    pageTheme, 
-    fontSize, 
-    pattern, 
-    pContent, 
-    globalSiteTheme, 
+  const {
+    pageTheme,
+    fontSize,
+    pattern,
+    pContent,
+    globalSiteTheme,
     announceStatus,
     currentUnit,
     currentSize,
     showImage,
     LS_KEYS,
-    completedSteps, 
-    sectionToggleStates 
+    completedSteps,
+    sectionToggleStates
   } = usePatternDetailContext();
-  
+
   const bodyRef = useRef(document.body);
   const htmlRef = useRef(document.documentElement);
   const abbrTooltipRef = useRef<HTMLDivElement | null>(null);
@@ -633,7 +633,7 @@ const PatternDetailViewLogic: React.FC = () => {
       bodyRef.current.classList.remove('dark-theme');
       htmlRef.current.classList.remove('dark-theme-pattern-active', 'dark');
     }
-    
+
     return () => {
       htmlRef.current.style.fontSize = '';
       bodyRef.current.classList.remove('pattern-detail-interactive-view', 'dark-theme');
@@ -651,9 +651,9 @@ const PatternDetailViewLogic: React.FC = () => {
   useEffect(() => {
     if (!pattern) return;
 
-    if (!document.getElementById('pdiv-abbr-tooltip-static')) { 
+    if (!document.getElementById('pdiv-abbr-tooltip-static')) {
         const newAbbrTooltip = document.createElement('div');
-        newAbbrTooltip.id = 'pdiv-abbr-tooltip'; 
+        newAbbrTooltip.id = 'pdiv-abbr-tooltip';
         newAbbrTooltip.className = 'pdiv-abbr-tooltip pdiv-no-print';
         newAbbrTooltip.setAttribute('role', 'tooltip');
         newAbbrTooltip.setAttribute('aria-hidden', 'true');
@@ -686,17 +686,17 @@ const PatternDetailViewLogic: React.FC = () => {
 
     const setupAbbrListeners = (container: Element) => {
         const abbrElements = container.querySelectorAll('abbr[data-original-title]');
-        abbrElements.forEach(el => { 
+        abbrElements.forEach(el => {
             const abbrEl = el as HTMLElement;
-            if ((abbrEl as any)._listenersAttachedLive) return; 
+            if ((abbrEl as any)._listenersAttachedLive) return;
 
             const enterHandler = () => { if (window.innerWidth > MOBILE_BREAKPOINT) showTooltip(abbrEl); };
             const leaveHandler = () => { if (window.innerWidth > MOBILE_BREAKPOINT) hideTooltip(); };
             const focusHandler = () => showTooltip(abbrEl);
-            const blurHandler = () => setTimeout(hideTooltip, 150); 
-            const clickHandler = (e: Event) => { 
-                e.preventDefault(); 
-                showTooltip(abbrEl); 
+            const blurHandler = () => setTimeout(hideTooltip, 150);
+            const clickHandler = (e: Event) => {
+                e.preventDefault();
+                showTooltip(abbrEl);
             };
             const keydownHandler = (e: KeyboardEvent) => { if (e.key === 'Escape') hideTooltip(); };
 
@@ -709,7 +709,7 @@ const PatternDetailViewLogic: React.FC = () => {
             (abbrEl as any)._listenersAttachedLive = true;
         });
     };
-    
+
     const observer = new MutationObserver((mutationsList) => {
         for(const mutation of mutationsList) {
             if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
@@ -735,20 +735,20 @@ const PatternDetailViewLogic: React.FC = () => {
         }
       }
     };
-    document.addEventListener('click', globalHide, true); 
+    document.addEventListener('click', globalHide, true);
     const globalKeydown = (e: KeyboardEvent) => { if (e.key === 'Escape') hideTooltip(); };
     document.addEventListener('keydown', globalKeydown);
 
     return () => {
       observer.disconnect();
-      if (abbrTooltipRef.current && abbrTooltipRef.current.id === 'pdiv-abbr-tooltip' && abbrTooltipRef.current.parentNode === document.body) { 
+      if (abbrTooltipRef.current && abbrTooltipRef.current.id === 'pdiv-abbr-tooltip' && abbrTooltipRef.current.parentNode === document.body) {
         document.body.removeChild(abbrTooltipRef.current);
       }
       abbrTooltipRef.current = null;
       document.removeEventListener('click', globalHide, true);
       document.removeEventListener('keydown', globalKeydown);
     };
-  }, [pattern, pageTheme]); 
+  }, [pattern, pageTheme]);
 
 
   const handleActualDownload = () => {
@@ -790,7 +790,7 @@ const PatternDetailViewLogic: React.FC = () => {
 export const PatternDetailPage: React.FC = () => {
   const { patternSlug } = useParams<{ patternSlug: string }>();
   const { theme: globalSiteTheme } = useGlobalTheme();
-  
+
   const statusMessageRef = useRef<HTMLDivElement>(null);
   const statusTimeoutRef = useRef<number | undefined>(undefined);
 
@@ -807,10 +807,10 @@ export const PatternDetailPage: React.FC = () => {
   }
 
   return (
-    <PatternDetailProvider 
-        patternData={pattern} 
+    <PatternDetailProvider
+        patternData={pattern}
         initialGlobalSiteTheme={globalSiteTheme}
-        statusMessageRef={statusMessageRef}
+        statusMessageRef={statusMessageRef as React.RefObject<HTMLDivElement>}
         statusTimeoutRef={statusTimeoutRef}
     >
       <PatternDetailViewLogic />

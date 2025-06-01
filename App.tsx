@@ -14,7 +14,6 @@ import { SearchPage } from './pages/SearchPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsOfUsePage } from './pages/TermsOfUsePage';
 import { NotFoundPage } from './pages/NotFoundPage';
-import { AREUM_ACCENT_COLOR } from './constants';
 
 const App: React.FC = () => {
   return (
@@ -35,7 +34,6 @@ const App: React.FC = () => {
           <Route path="terms-of-use" element={<TermsOfUsePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-        
         {/* PatternDetailPage route - renders without the main Layout */}
         <Route path="patterns/:patternSlug" element={<PatternDetailPage />} />
       </Routes>

@@ -31,14 +31,13 @@ export const Button: React.FC<ButtonProps> = ({
     lg: "px-6 py-3 text-lg",
   };
 
-  // AREUM_ACCENT_COLOR is now 'accent-clay'. Tailwind config has 'accent-clay' and 'accent-clay-hover'.
   const variantStyles = {
     primary: `bg-${AREUM_ACCENT_COLOR} text-white hover:bg-${AREUM_ACCENT_COLOR}-hover focus:ring-${AREUM_ACCENT_COLOR} dark:text-bg-primary`, // dark:text-bg-primary for high contrast on dark accent
     secondary: "bg-bg-accent text-text-secondary hover:bg-border-light dark:hover:bg-border-medium focus:ring-text-muted", // border-light for light hover, border-medium for dark hover
     outline: `border border-${AREUM_ACCENT_COLOR} text-${AREUM_ACCENT_COLOR} hover:bg-${AREUM_ACCENT_COLOR} hover:text-white focus:ring-${AREUM_ACCENT_COLOR} dark:hover:text-bg-primary`, // dark:hover:text-bg-primary for high contrast
     ghost: `text-${AREUM_ACCENT_COLOR} hover:bg-${AREUM_ACCENT_COLOR}/10 focus:ring-${AREUM_ACCENT_COLOR} dark:hover:bg-${AREUM_ACCENT_COLOR}/20`, // Using opacity with the accent color
   };
-  
+
   const combinedClassName = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
 
   const content = (

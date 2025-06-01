@@ -2,20 +2,21 @@
 import React from 'react';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { AREUM_ACCENT_COLOR } from '../constants';
+import Transition from '@/src/components/about-pattern/Transition';
 
 export const AboutPage: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto space-y-10">
       <SectionTitle title="About" />
-
       <section>
-        <img 
-            src="https://picsum.photos/seed/areum-hands-complex-pattern/800/500" 
+        {/* <img
+            src="https://picsum.photos/seed/areum-hands-complex-pattern/800/500"
             alt="Areum's hands shaping fabric for a complex knit pattern, with notebooks and swatches nearby"
             className="w-full rounded-lg shadow-xl mb-8 object-cover max-h-[500px]"
-        />
-        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4 
-                        prose-headings:font-primary prose-headings:text-text-primary 
+        /> */}
+        <Transition />
+        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4
+                        prose-headings:font-primary prose-headings:text-text-primary
                         prose-p:text-text-secondary prose-li:text-text-secondary
                         prose-strong:text-text-primary
                         prose-a:text-${AREUM_ACCENT_COLOR} dark:prose-a:text-${AREUM_ACCENT_COLOR} hover:prose-a:underline`}>
@@ -33,13 +34,13 @@ export const AboutPage: React.FC = () => {
 
       <section>
         <h2 className={`font-primary text-2xl md:text-3xl font-semibold text-text-primary mb-4`}>What I Make</h2>
-        <img 
-            src="https://picsum.photos/seed/garment-construction-examples/800/400" 
+        <img
+            src="https://picsum.photos/seed/garment-construction-examples/800/400"
             alt="Three finished knit garments showcasing different construction: seamless, seamed, and uniquely shaped"
             className="w-full rounded-lg shadow-xl mb-8 object-cover max-h-[400px]"
         />
-        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4 
-                        prose-headings:font-primary prose-headings:text-text-primary 
+        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4
+                        prose-headings:font-primary prose-headings:text-text-primary
                         prose-p:text-text-secondary prose-li:text-text-secondary
                         prose-strong:text-text-primary
                         prose-a:text-${AREUM_ACCENT_COLOR} dark:prose-a:text-${AREUM_ACCENT_COLOR} hover:prose-a:underline`}>
@@ -50,13 +51,13 @@ export const AboutPage: React.FC = () => {
             Each pattern includes the reasoning behind my choices—not just what to do, but why each decision creates better fit and finish. When I hit problems during design, I document how I work through solutions. These aren't polished tutorials; they're real problem-solving in action.
           </p>
         </div>
-        <img 
-            src="https://picsum.photos/seed/swatch-progression-techniques/800/300" 
+        <img
+            src="https://picsum.photos/seed/swatch-progression-techniques/800/300"
             alt="Progression of knit swatches: basic stitches, cables, and complex textures"
             className="w-full rounded-lg shadow-xl my-8 object-cover max-h-[300px]"
         />
-        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4 
-                        prose-headings:font-primary prose-headings:text-text-primary 
+        <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4
+                        prose-headings:font-primary prose-headings:text-text-primary
                         prose-p:text-text-secondary prose-li:text-text-secondary
                         prose-strong:text-text-primary
                         prose-a:text-${AREUM_ACCENT_COLOR} dark:prose-a:text-${AREUM_ACCENT_COLOR} hover:prose-a:underline`}>
@@ -65,16 +66,16 @@ export const AboutPage: React.FC = () => {
           </p>
         </div>
       </section>
-      
+
       <section>
         <h2 className={`font-primary text-2xl md:text-3xl font-semibold text-text-primary mb-4`}>Why This Approach</h2>
-        <img 
-            src="https://picsum.photos/seed/areum-notebook-design-process/800/450" 
+        <img
+            src="https://picsum.photos/seed/areum-notebook-design-process/800/450"
             alt="Areum's open notebook with sketches, yarn samples, calculations, and a work-in-progress garment"
             className="w-full rounded-lg shadow-xl mb-8 object-cover max-h-[450px]"
         />
         <div className={`prose dark:prose-invert max-w-none text-text-secondary space-y-4
-                        prose-headings:font-primary prose-headings:text-text-primary 
+                        prose-headings:font-primary prose-headings:text-text-primary
                         prose-p:text-text-secondary prose-li:text-text-secondary
                         prose-strong:text-text-primary
                         prose-a:text-${AREUM_ACCENT_COLOR} dark:prose-a:text-${AREUM_ACCENT_COLOR} hover:prose-a:underline`}>

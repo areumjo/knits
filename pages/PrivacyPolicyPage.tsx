@@ -1,19 +1,19 @@
 
 import React from 'react';
 import { SectionTitle } from '../components/ui/SectionTitle';
-import { AREUM_ACCENT_COLOR } from '../constants'; // This is 'accent-clay'
+import { AREUM_ACCENT_COLOR } from '../constants';
 
 export const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto">
       <SectionTitle title="Privacy Policy" />
-      <div className={`prose dark:prose-invert max-w-none bg-bg-secondary p-6 rounded-lg shadow 
-                      prose-headings:font-primary prose-headings:text-text-primary 
+      <div className={`prose dark:prose-invert max-w-none bg-bg-secondary p-6 rounded-lg shadow
+                      prose-headings:font-primary prose-headings:text-text-primary
                       prose-p:text-text-secondary prose-li:text-text-secondary
                       prose-strong:text-text-primary
                       prose-a:text-${AREUM_ACCENT_COLOR} dark:prose-a:text-${AREUM_ACCENT_COLOR} hover:prose-a:underline`}>
         <p><em>Last Updated: {new Date().toLocaleDateString()}</em></p>
-        
+
         <h2>1. Introduction</h2>
         <p>Welcome to Areum Knits. We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
 
@@ -24,7 +24,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <li><strong>Derivative Data:</strong> Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.</li>
           <li><strong>Data from Social Networks:</strong> User information from social networking sites, such as Instagram, Pinterest, Ravelry, including your name, your social network username, location, gender, birth date, email address, profile picture, and public data for contacts, if you connect your account to such social networks.</li>
         </ul>
-        
+
         <h2>3. Use of Your Information</h2>
         <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
         <ul>

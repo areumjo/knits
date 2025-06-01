@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | Areum Knits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* Light mode - Refined Neutrals */
+      --bg-primary: #fafaf9;
+      --bg-secondary: #f5f5f4;
+      --bg-accent: #f0f0ee;
+      --text-primary: #1c1917;
+      --text-secondary: #44403c;
+      --text-muted: #78716c;
+      --accent-clay: #a67c5a;
+      --accent-clay-hover: #906a4e;
+      --accent-rust: #b85c3e;
+      --border-light: #e7e5e4;
+      --font-primary: 'Cormorant Garamond', serif;
+      --font-secondary: 'Lato', sans-serif;
+    }
+
+    .dark {
+      /* Dark mode - Evening Studio */
+      --bg-primary: #0c0a09;
+      --bg-secondary: #1c1917;
+      --bg-accent: #292524;
+      --text-primary: #fafaf9;
+      --text-secondary: #e7e5e4;
+      --text-muted: #a8a29e;
+      --accent-clay: #b8926d;
+      --accent-clay-hover: #a07e5b;
+      --accent-rust: #c7724f;
+      --border-light: #44403c;
+    }
+
+    body {
+      font-family: var(--font-secondary);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      padding: 2rem;
+      max-width: 600px;
+    }
+
+    .icon {
+      width: 5rem;
+      height: 5rem;
+      color: var(--accent-rust);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: var(--font-primary);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: var(--font-primary);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+      color: white;
+      background-color: var(--accent-clay);
+      border: none;
+      border-radius: 0.375rem; /* 6px */
+      text-decoration: none;
+      transition: background-color 0.2s ease-in-out;
+      cursor: pointer;
+    }
+    .dark .button {
+        color: var(--bg-primary); /* High contrast text on dark accent */
+    }
+
+    .button:hover {
+      background-color: var(--accent-clay-hover);
+    }
+
+    .button svg {
+      width: 1.25rem; /* 20px */
+      height: 1.25rem; /* 20px */
+      margin-right: 0.5rem;
+    }
+    </style>
+    <script>
+      // Script to apply dark mode based on preference/localStorage
+      // This script is simplified and may not perfectly match ThemeContext logic
+      // but provides basic dark mode for the static 404 page.
+      // Ensure this runs before body content is fully rendered to avoid FOUC.
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+    </svg>
+    <h1>404</h1>
+    <h2>Page Not Found</h2>
+    <p>
+      Oops! The page you're looking for doesn't seem to exist. It might have been moved, deleted, or perhaps you mistyped the address.
+    </p>
+    <a href="/" class="button">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Go Back Home
+    </a>
+  </div>
+</body>
+</html>
